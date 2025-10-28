@@ -1,0 +1,7750 @@
+{
+	"info": {
+		"_postman_id": "cfb96594-9cb8-4b5f-bb29-7c8e9c69b79d",
+		"name": "karman-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24163138",
+		"_collection_link": "https://karman24.postman.co/workspace/Karman~037a531d-2260-417a-8278-9f9b77a8da3f/collection/24163138-cfb96594-9cb8-4b5f-bb29-7c8e9c69b79d?action=share&source=collection_link&creator=24163138"
+	},
+	"item": [
+		{
+			"name": "counteragent",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "counteragentType",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "person[address]",
+									"value": "Ставропольский край, г Железноводск, поселок Иноземцево, ул Пролетарская, д 3Г, кв 124",
+									"type": "text"
+								},
+								{
+									"key": "person[firstName]",
+									"value": "Богдан1",
+									"type": "text"
+								},
+								{
+									"key": "person[lastName]",
+									"value": "Ткаченко2",
+									"type": "text"
+								},
+								{
+									"key": "person[middleName]",
+									"value": "Александрович3",
+									"type": "text"
+								},
+								{
+									"key": "person[gender]",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "person[citizenship]",
+									"value": "ru",
+									"type": "text"
+								},
+								{
+									"key": "person[birthDate]",
+									"value": "17.04.1986",
+									"type": "text"
+								},
+								{
+									"key": "person[contacts][0][type]",
+									"value": "phone",
+									"type": "text"
+								},
+								{
+									"key": "person[contacts][0][value]",
+									"value": "79150720224",
+									"type": "text"
+								},
+								{
+									"key": "person[documents][0][type]",
+									"value": "passport_foreign",
+									"type": "text"
+								},
+								{
+									"key": "person[documents][0][number]",
+									"value": "0315 272591",
+									"type": "text"
+								},
+								{
+									"key": "person[documents][0][issued]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "person[isFromSmartLombard]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "person[documents][0][date]",
+									"value": "10.05.2014",
+									"type": "text"
+								},
+								{
+									"key": "sdfsd",
+									"value": "{{$timestamp}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/counteragent",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"counteragent"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "person[firstName]",
+									"value": "Yulduz",
+									"type": "text"
+								},
+								{
+									"key": "person[lastName]",
+									"value": "Abdullaeva",
+									"type": "text"
+								},
+								{
+									"key": "person[birthDate]",
+									"value": "05.12.1988",
+									"type": "text"
+								},
+								{
+									"key": "person[gender]",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "person[addressEqual]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "person[documents][0][type]",
+									"value": "foreign_passport",
+									"type": "text"
+								},
+								{
+									"key": "person[documents][0][number]",
+									"value": "P AA3535168",
+									"type": "text"
+								},
+								{
+									"key": "counteragentType",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "linkId",
+									"value": "3159",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/counteragent/3159",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"counteragent",
+								"3159"
+							],
+							"query": [
+								{
+									"key": "conditions[]",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "counteragentType",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "person[address]",
+									"value": "Ставропольский край, г Железноводск, поселок Иноземцево, ул Пролетарская, д 3Г, кв 124",
+									"type": "text"
+								},
+								{
+									"key": "person[firstName]",
+									"value": "Сергей",
+									"type": "text"
+								},
+								{
+									"key": "person[lastName]",
+									"value": "Кравцов-Дорошенко",
+									"type": "text"
+								},
+								{
+									"key": "person[gender]",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "person[citizenship]",
+									"value": "ru",
+									"type": "text"
+								},
+								{
+									"key": "person[birthDate]",
+									"value": "17.04.1986",
+									"type": "text"
+								},
+								{
+									"key": "person[middleName]",
+									"value": "Николаевич",
+									"type": "text"
+								},
+								{
+									"key": "person[contacts][0][type]",
+									"value": "phone",
+									"type": "text"
+								},
+								{
+									"key": "person[contacts][0][value]",
+									"value": "79150720224",
+									"type": "text"
+								},
+								{
+									"key": "person[documents][0][type]",
+									"value": "passport",
+									"type": "text"
+								},
+								{
+									"key": "person[documents][0][number]",
+									"value": "0715 087608",
+									"type": "text"
+								},
+								{
+									"key": "person[documents][0][primary]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "person[documents][1][type]",
+									"value": "passport",
+									"type": "text"
+								},
+								{
+									"key": "person[documents][1][number]",
+									"value": "0722 900226",
+									"type": "text"
+								},
+								{
+									"key": "person[documents][1][primary]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "person[id]",
+									"value": "17331",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/counteragent/1?expand=fullName",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"counteragent",
+								"1"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "fullName"
+								},
+								{
+									"key": "conditions[]",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "index",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "counteragentType",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "person[address]",
+									"value": "Ставропольский край, г Железноводск, поселок Иноземцево, ул Пролетарская, д 3Г, кв 124",
+									"type": "text"
+								},
+								{
+									"key": "person[firstName]",
+									"value": "Сергей",
+									"type": "text"
+								},
+								{
+									"key": "person[lastName]",
+									"value": "Кравцов-Дорошенко",
+									"type": "text"
+								},
+								{
+									"key": "person[gender]",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "person[citizenship]",
+									"value": "ru",
+									"type": "text"
+								},
+								{
+									"key": "person[birthDate]",
+									"value": "17.04.1986",
+									"type": "text"
+								},
+								{
+									"key": "person[middleName]",
+									"value": "Николаевич",
+									"type": "text"
+								},
+								{
+									"key": "person[contacts][0][type]",
+									"value": "phone",
+									"type": "text"
+								},
+								{
+									"key": "person[contacts][0][value]",
+									"value": "79150720224",
+									"type": "text"
+								},
+								{
+									"key": "person[documents][0][type]",
+									"value": "passport",
+									"type": "text"
+								},
+								{
+									"key": "person[documents][0][number]",
+									"value": "0715 087608",
+									"type": "text"
+								},
+								{
+									"key": "person[documents][0][primary]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "person[documents][1][type]",
+									"value": "passport",
+									"type": "text"
+								},
+								{
+									"key": "person[documents][1][number]",
+									"value": "0722 900226",
+									"type": "text"
+								},
+								{
+									"key": "person[documents][1][primary]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "person[id]",
+									"value": "17331",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/counteragent/?ss=Ломбард",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"counteragent",
+								""
+							],
+							"query": [
+								{
+									"key": "ss",
+									"value": "Ломбард"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{base_url}}/counteragent/search?ss=Иван",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"counteragent",
+								"search"
+							],
+							"query": [
+								{
+									"key": "ss",
+									"value": "Иван"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contract",
+			"item": [
+				{
+					"name": "transaction",
+					"item": [
+						{
+							"name": "lombard-put-on-market",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "fundId",
+											"value": "80991",
+											"type": "text"
+										},
+										{
+											"key": "ff",
+											"value": "{{$timestamp}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/contract/lombard-put-on-market/transaction",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"contract",
+										"lombard-put-on-market",
+										"transaction"
+									],
+									"query": [
+										{
+											"key": "expand",
+											"value": "buyingup,contractGiisId,logs,statusName",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "54956",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "lombard-sign",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "fundId",
+											"value": "85458",
+											"type": "text"
+										},
+										{
+											"key": "ff",
+											"value": "{{$timestamp}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/contract/lombard-put-on-market/transaction",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"contract",
+										"lombard-put-on-market",
+										"transaction"
+									],
+									"query": [
+										{
+											"key": "expand",
+											"value": "buyingup,contractGiisId,logs,statusName",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "10",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": "54956",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "index",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{base_url}}/contract?status=10&per_page=15&expand=products,productsCondition,instanceName,conditionName,contractHasTariff,contractHasTariffId,counteragentFullName,isProductJewelry,validityDate,dmdkContract,personId,departmentName,responsibleNameShort,expiredDays,getCost,counteragentCheckDocuments,comments,userCreateName,dateEndGracePeriod,percentBalance&tariffIds[]=1",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"contract"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "10"
+								},
+								{
+									"key": "per_page",
+									"value": "15"
+								},
+								{
+									"key": "expand",
+									"value": "products,productsCondition,instanceName,conditionName,contractHasTariff,contractHasTariffId,counteragentFullName,isProductJewelry,validityDate,dmdkContract,personId,departmentName,responsibleNameShort,expiredDays,getCost,counteragentCheckDocuments,comments,userCreateName,dateEndGracePeriod,percentBalance"
+								},
+								{
+									"key": "tariffIds[]",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-quantity-contract",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://karman-api.loc/contract/get-quantity-contract",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"contract",
+								"get-quantity-contract"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "buyingup,contractGiisId,logs,statusName",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "54956",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contract",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "productIds[]",
+									"value": "43659,43570,43574",
+									"type": "text"
+								},
+								{
+									"key": "counteragentId",
+									"value": "11",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/contract/54970?comment=Тестовый коммент 5",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"contract",
+								"54970"
+							],
+							"query": [
+								{
+									"key": "comment",
+									"value": "Тестовый коммент 5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "store",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "productIds[]",
+									"value": "146567",
+									"type": "text"
+								},
+								{
+									"key": "counteragentId",
+									"value": "1249",
+									"type": "text"
+								},
+								{
+									"key": "t",
+									"value": "{{$timestamp}}",
+									"type": "text"
+								},
+								{
+									"key": "createContract",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Усцов Константин Сергеевич",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/contract",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"contract"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{base_url}}/contract/110136",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"contract",
+								"110136"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put-on-market/delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{base_url}}/contract/lombard-put-on-market/transaction/269947",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"contract",
+								"lombard-put-on-market",
+								"transaction",
+								"269947"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contract/24156",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiODM3ZjE1N2MxODU4MDZjYzNlNDI2MTk3MjllNWQ2YjA5YTlkZWM3ZjAzNDE2NDZiMmYwYzEyY2EyNTliMmYyYWZjYWRmYzc0YmZmOGI3OTMiLCJpYXQiOjE2ODM3MjQ2NzYuMjM0NDE0LCJuYmYiOjE2ODM3MjQ2NzYuMjM0NDE2LCJleHAiOjE3MTUzNDcwNzYuMjMwNjQ0LCJzdWIiOiIxNjMiLCJzY29wZXMiOlsiKiJdfQ.AkZnSWMykaZCXhwHY1qlZexnOAKcI3D6df_fcJGkMAe_blYsDcr67v6zgU3yWLyhV5YBkDzKra-iPR7otxP0LB0PQ2t1zIEXK5T0MS2-qe-T8ljBAahCu2SS74KqMz47SRYamMYECC_DP7oOiN0qKg9MooZRMjvo08ggnzdq0YQCVA4Kt2Dyw_-ij3J9NNCAQ0-jrkAUEvH2nzhQ18NxjK5_XFrWNgDM0ax1etSd5xKigoNNA9YkMz1KcucVMa8uao9ZRtx4hPnCj1VgJne6Dzia3MbI6lS6dkwhpXPmGZLD9PoI_-wG-i5Ofr-KfUHlh-FGkXHZ8BUvO5EESfnvJJXo1k0wRZ5HjATQsgdNGiwmpmD4GGXiuB3JRIA42IduN6-FxfohtUW52FvK4B4xHabtlHiH-8793SOs76RCxQmqXnfJXu-nx_Cs4IXWD0MxEs6nreN3ss_s5a8DEPgRe4i0cpjas-YJyngDl_gD5icVhwInDX2H79COtG1vSJM04DSCy1EInwZwNGnWN7X82Qo7pHmAxYDEu3qpTLh5k-ikDd70pXHkprM4Z8wAnU8rdj5rGbEYU4e-QmrR5sHMCvdCrGO7e54lAcRGKbLF4p1N988sK5EMrJi8VTzPQeQC-nFZua2rElYwWBLKrfDO_wl2AXAgGOexZ7NihxJo_p0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "updateTariff",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "tariffId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/contract/85446",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"contract",
+								"85446"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "products",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contract/tariff",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/contract/tariff/54",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"contract",
+								"tariff",
+								"54"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contract/tariff/all-list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/contract/tariff/all-list",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"contract",
+								"tariff",
+								"all-list"
+							],
+							"query": [
+								{
+									"key": "categoryId",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contract/tariff/check-psk",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/contract/tariff/check-psk",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"contract",
+								"tariff",
+								"check-psk"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contract/condition-list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/contract/condition-list",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"contract",
+								"condition-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "contract-has-tariff",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/contract-has-tariff",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"contract-has-tariff"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "contact",
+			"item": [
+				{
+					"name": "contact/contact-list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/contact/contact-list",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"contact",
+								"contact-list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "deal",
+			"item": [
+				{
+					"name": "deal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/deal/213?personName=1",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"deal",
+								"213"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "transactionRollbacked",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "56",
+									"disabled": true
+								},
+								{
+									"key": "status[]",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "personName",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deal",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "contract",
+									"value": "АА222222",
+									"type": "text"
+								},
+								{
+									"key": "costContract",
+									"value": "1024",
+									"type": "text"
+								},
+								{
+									"key": "costService",
+									"value": "150.00",
+									"type": "text"
+								},
+								{
+									"key": "counteragentId",
+									"value": "541",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Ткаченко1 Богдан Александрович",
+									"type": "text"
+								},
+								{
+									"key": "serviceId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/deal/transaction",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"deal",
+								"transaction"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "giis-dmdk",
+			"item": [
+				{
+					"name": "uin",
+					"item": [
+						{
+							"name": "index",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/giis-dmdk/uin?uins=6432301080038412%0A6432300780004370",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"giis-dmdk",
+										"uin"
+									],
+									"query": [
+										{
+											"key": "uins",
+											"value": "6432301080038412%0A6432300780004370"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get-quantity",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/giis-dmdk/uin/get-quantity",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"giis-dmdk",
+										"uin",
+										"get-quantity"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "find-product-ids",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "t",
+											"value": "{{$timestamp}}",
+											"type": "text"
+										},
+										{
+											"key": "uins",
+											"value": "6432400000017449\n6644443344334455\n6432300007939264\n6432300007939277\n6432300007939020\n6432300007939034\n6432300007939016\n6432300007933199\n6432300007925055\n6432300007924648\n6432300007924574\n6432300007920040\n6432300007920031\n6432300007919635\n6432300007919569\n6432300007916317\n6432300007913767\n6432300007913387\n6432300007913349\n6432303828782881\n6432303827742981\n6432303827739406\n6432303827723760\n6432303827363578\n6432303826507529\n6432303826469511\n6432303826469570\n6432303826469648\n6432303826469465\n6432303826362875\n6432303826316986\n6432303825527678\n6432303825527693\n6432303825527555\n6432303825527547\n6432303825527669\n6432303825527617\n6432303825527582\n6432303825527631\n6432303825527645\n6432303824645502\n6432303824315119\n6432303823467001\n6432303823466985\n6432303822960679\n6432303821493105\n6432400000021841\n6432303821178900\n6432303821178876\n6432303820941900\n6432303820952717\n6432303820797337\n6432303820422120\n6432303820422135\n6432303820422114\n6432303819854400\n6432303819854392\n6432303819854367\n6432303819854425\n6432303819680681\n6432303818060452\n6432303818047157\n6432303817953732\n6432303817992429\n6432303816072415\n6432303816039382\n6432303815997640\n6432303815530409\n6432303815398507\n6432303815612058\n6432303815612259\n6432303815611981\n6432303815612281\n6432303815612270\n6432303815611960\n6432303815612119\n6432303815612126\n6432303815612133\n6432303815612011\n6432303814421071\n6432303813603894\n6432303812940748\n6432303812153637\n6432303812031623\n6432303810908651\n6432303810905139\n6432303810653612\n6432303810539610\n6432303810539625\n6432303810534102\n6432303810225405\n6432303810225417\n6432303809776668\n6432303809652901\n6432303808808010\n6432303808808005\n6432303808119083\n6432303808011302\n6432303808011286\n6432303805330654\n6432303803875654\n6432303803571216\n6432303802619096\n6432303802115377\n6432303802103664\n6432303802103631\n6432303801132906\n6432303800869778\n6432303800869487\n6432303800398335\n6432303795704000\n6432303795703975\n6432303795704044\n6432303795465406\n6432303795465374\n6432303795413069\n6432303794658615\n6432303794658626\n6432303792537038\n6432303790757921\n6432303790326847\n6432303789911417\n6432303789822522\n6432303789699424\n6432303785441374\n6432303785441390\n6432303785224261\n6432303785022888\n6432303783310085\n6432303782344640\n6432303782238264\n6432303782156354\n6432303782144167\n6432303782102548\n6432303781874591\n6432303781874589\n6432303781811616\n6432303781780580\n6432303781780236\n6432303781773751\n6432303781577835\n6432303780012749\n6432303780012754\n6432303778392283\n6432303778397008\n6432303778426246\n6432303778424548\n6432303778424618\n6432303778424633\n6432303778424659\n6432303778424589\n6432303778427734\n6432303778428230\n6432303778428191\n6432303778428227\n6432303769737583\n6432303767924707\n6432303767880962\n6432303767702830\n6432303766231453\n6432303765674898\n6432303765674941\n6432303765110950\n6432303762762300\n6432303762762327\n6432303759384952\n6432303758922109\n6432303753317795\n6432303752663247\n6432303752327209\n6432303750772774\n6432303750666769\n6432303750646451\n6432303750638954\n6432303750524496\n6432303749937078\n6432303749870272\n6432303749870299\n6432303749870281\n6432303749692869\n6432303749692875\n6432303749146193\n6432303744301833\n6432303743481517\n6432303743481484\n6432303741459955\n6432303740269121\n6432303738629542\n6432303736568047\n6432303736568039\n6432303735598307\n6432303733384551\n6432303733384595\n6432303733384612\n6432303732777612\n6432303717526396\n6432303714932054\n6432303714412752\n6432303713247430\n6432303712846450\n6432303709185422\n6432303708610431\n6432303706869733\n6432303706831332\n6432303706797859\n6432303706782131\n6432303706782145\n6432303706769719\n6432303706769708\n6432303706757838\n6432303706726110\n6432303706399199\n6432303706397057\n6432303710208980\n6432303710208966\n6432303710207195\n6432303710168959\n6432303710209754\n6432303710212939\n6432303710212977\n6432303710220474\n6432303710224588\n6432303710224547\n6432303710227294\n6432303710227323\n6432303710224617\n6432303706172421\n6432303706035719\n6432303826549503\n6432303702806095\n6432303701607577\n6432303701245730\n6432303698372758\n6432303695755040\n6432303695755063\n6432303695105260\n6432303694084983\n6432303692685880\n6432303692685762\n6432303692685715\n6432303692685845\n6432303692685909\n6432303692685937\n6432303692685940\n6432303692685808\n6432303691865502\n6432303691294487\n6432303691249968\n6432303691249977\n6432303691249955\n6432303691176589\n6432303691104639\n6432303691104623\n6432303691104676\n6432303690637417\n6432303690637438\n6432303690637424\n6432303692096015\n6432303692095980\n6432303688646743\n6432303688646736\n6432303688640929\n6432303688609512\n6432303686144050\n6432303686144029\n6432303686143918\n6432303685381348\n6432303685381258\n6432303685381377\n6432303683540862\n6432303683293898\n6432303681844920\n6432303678713461\n6432303678639834\n6432303677277769\n6432303672780176\n6432303672780152\n6432303671657295\n6432303671654453\n6432303671650423\n6432303671640162\n6432303671640171\n6432303671527838\n6432303671524035\n6432303671499610\n6432303671436796\n6432303671432237\n6432303671432255\n6432303671359127\n6432303671359110\n6432303671141649\n6432303671141661\n6432303671130721\n6432303671108051\n6432303671108107\n6432303670885232\n6432303669249058\n6432303669231456\n6432303668870162\n6432303668870157\n6432303668206594\n6432303668206580\n6432303666574817\n6432303666429449\n6432303666037081\n6432303665665027\n6432303665377892\n6432303663273368\n6432303662664418\n6432303662664395\n6432303661119706\n6432303661119682\n6432303661119713\n6432303661119728\n6432303660036928\n6432303659915407\n6432303658796052\n6432303658796128\n6432303658796019\n6432303658796070\n6432303658796083\n6432303658796035\n6432303658796174\n6432303658796157\n6432303658503863\n6432303655687963\n6432303655349484\n6432303655041937\n6432303654930461\n6432303654386418\n6432303654386426\n6432303654386459\n6432303654386447\n6432303654386391\n6432303654386385\n6432303654386357\n6432303653771853\n6432303649682184\n6432303649550163\n6432303648831207\n6432303648751012\n6432303648750995\n6432303648750973\n6432303648751036\n6432303648751024\n6432303648751005\n6432303648750958\n6432303648718721\n6432303648574107\n6432303648538388\n6432303648538400\n6432303648538413\n6432303648393704\n6432303647658527\n6432303645131476\n6432303643381227\n6432303643064321\n6432303640941399\n6432303640941407\n6432303640941368\n6432303640941424\n6432303638613953\n6432303638613936\n6432303635287240\n6432303632970363\n6432303632433322\n6432303632433310\n6432303629743584\n6432303629729516\n6432303628309903\n6432303622391325\n6432303622266537\n6432303619641564\n6432303619630572\n6432303619630429\n6432303619629530\n6432303619565105\n6432303619565094\n6432303619479142\n6432303619479138\n6432303619462448\n6432303619442823\n6432303619076924\n6432303618539969\n6432303617766827\n6432303617766799\n6432303617766802\n6432303617762764\n6432303617762818\n6432303617762820\n6432303617762793\n6432303617762807\n6432303617762787\n6432303617714396\n6432303614492859\n6432303612269322\n6432303612269338\n6432303612162485\n6432303612162510\n6432303612162537\n6432303612162575\n6432303612162522\n6432303611370406\n6432303611370474\n6432303611370359\n6432303608802694\n6432303607174584\n6432303607084693\n6432303607084672\n6432303605730755\n6432303605730781\n6432303603911921\n6432303602364208\n6432303601138564\n6432303600380990\n6432303600380982\n6432303600380974\n6432303599127655\n6432303597266703\n6432303596503365\n6432303596496732\n6432303596496753\n6432303591872343\n6432303591387924\n6432303591387931\n6432303591387915\n6432303591343648\n6432303591286308\n6432303591253722\n6432303591249861\n6432303591221482\n6432303591051302\n6432303591018601\n6432303589281777\n6432303588033889\n6432303587747828\n6432303587747817\n6432303577161145\n6432303577161090\n6432303577161108\n6432303577161052\n6432303577161134\n6432303577161086\n6432303577161123\n6432303577161078\n6432303576202151\n6432303574999893\n6432303574643840\n6432303574643832\n6432303574565763\n6432303572130603\n6432303572028846\n6432303572020636\n6432303572020664\n6432303571521133\n6432303571291784\n6432303570452541\n6432303570450577\n6432303570450511\n6432303570350909\n6432303568758128\n6432303567734330\n6432303565470582\n6432303565213800\n6432303565213737\n6432303565213765\n6432303565162409\n6432303563874377\n6432303563510711\n6432303563255432\n6432303563209764\n6432303569075923\n6432303562891239\n6432303562891581\n6432303558704108\n6432303558052068\n6432303555336774\n6432303555290965\n6432303555031318\n6432303554953891\n6432303554850014\n6432303554850005\n6432303554839487\n6432303554792265\n6432303554603033\n6432303554603029\n6432303554398999\n6432303554258406\n6432303554258427\n6432303554258430\n6432303554258413\n6432303553268308\n6432303552240237\n6432303438206297\n6432301650877416\n6432301505672560\n6432301505667745\n6432301340011301\n6432301340011647\n6432301340011659\n6432301340011623\n6432301340011638\n6432301340011297\n6432301340011164\n6432301340010789\n6432301340010675\n6432301340011027\n6432301340009063\n6432301340018227\n6432301339342372\n6432301338488604\n6432301332513358\n6432301331146532\n6432301331146479\n6432301331146545\n6432301326112202\n6432301324622578\n6432301324614534\n6432303806331207\n6432303806331069\n6432303806331144\n6432301324432423\n6432301324394556",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/giis-dmdk/uin/find-product-ids",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"giis-dmdk",
+										"uin",
+										"find-product-ids"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "marking",
+					"item": [
+						{
+							"name": "index",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/giis-dmdk/marking",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"giis-dmdk",
+										"marking"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/giis-dmdk/marking/1?expand=productIds",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"giis-dmdk",
+										"marking",
+										"1"
+									],
+									"query": [
+										{
+											"key": "expand",
+											"value": "productIds"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "codeMru",
+											"value": "0440",
+											"type": "text"
+										},
+										{
+											"key": "dtDelivery",
+											"value": "1711054800",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "isConsigneeLegal",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "isUrgency",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "metalId",
+											"value": "77",
+											"type": "text"
+										},
+										{
+											"key": "organizationId",
+											"value": "9",
+											"type": "text"
+										},
+										{
+											"key": "productIds[]",
+											"value": "146565",
+											"type": "text"
+										},
+										{
+											"key": "productIds[]",
+											"value": "129220",
+											"type": "text"
+										},
+										{
+											"key": "productIds[]",
+											"value": "124698",
+											"type": "text"
+										},
+										{
+											"key": "statusId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "time",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "typeId",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/giis-dmdk/marking/5",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"giis-dmdk",
+										"marking",
+										"5"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "pack",
+					"item": [
+						{
+							"name": "store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "productIds[]",
+											"value": "186745",
+											"type": "text"
+										},
+										{
+											"key": "t",
+											"value": "{{$timestamp}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/giis-dmdk/pack",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"giis-dmdk",
+										"pack"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "packProduct",
+					"item": []
+				},
+				{
+					"name": "request",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "{{base_url}}/giis-dmdk/request",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"giis-dmdk",
+								"request"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "specification/send",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "productIds[]",
+									"value": "12344",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "isReplace",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/giis-dmdk/specification/1",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"giis-dmdk",
+								"specification",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-uin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "productId",
+									"value": "106803",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/giis-dmdk/uin/get-uin",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"giis-dmdk",
+								"uin",
+								"get-uin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-status-code",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "productId",
+									"value": "106803",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/giis-dmdk/get-status-code",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"giis-dmdk",
+								"get-status-code"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "log",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/giis-dmdk/log?expand=relationRequest,statusName",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"giis-dmdk",
+								"log"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "relationRequest,statusName"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "write-off-uin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "uins",
+									"value": "6432300007306795\\n6432300007306803",
+									"type": "text"
+								},
+								{
+									"key": "reason",
+									"value": "23",
+									"type": "text"
+								},
+								{
+									"key": "dsf",
+									"value": "{{$timestamp}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/giis-dmdk/write-off-uin",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"giis-dmdk",
+								"write-off-uin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "contractId",
+									"value": "64253",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/giis-dmdk/upload",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"giis-dmdk",
+								"upload"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mass-upload",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/giis-dmdk/mass-upload?contractIds[]=53684&contractIds[]=53674&contractIds[]=53576&contractIds[]=53374&contractIds[]=48324&dat={{$timestamp}}",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"giis-dmdk",
+								"mass-upload"
+							],
+							"query": [
+								{
+									"key": "contractIds[]",
+									"value": "53684"
+								},
+								{
+									"key": "contractIds[]",
+									"value": "53674"
+								},
+								{
+									"key": "contractIds[]",
+									"value": "53576"
+								},
+								{
+									"key": "contractIds[]",
+									"value": "53374"
+								},
+								{
+									"key": "contractIds[]",
+									"value": "48324"
+								},
+								{
+									"key": "dat",
+									"value": "{{$timestamp}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mass-uin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "contractIds[]",
+									"value": "81002",
+									"type": "text"
+								},
+								{
+									"key": "contractIds[]",
+									"value": "81001",
+									"type": "text"
+								},
+								{
+									"key": "ff",
+									"value": "{{$timestamp}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/giis-dmdk/mass-uin",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"giis-dmdk",
+								"mass-uin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "mass-change-status",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "contracts[0][id]",
+									"value": "898",
+									"type": "text"
+								},
+								{
+									"key": "contracts[0][statusReceiptId]",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "contracts[0][statusRequestId]",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "contracts[1][id]",
+									"value": "481",
+									"type": "text"
+								},
+								{
+									"key": "contracts[1][statusReceiptId]",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "contracts[1][statusRequestId]",
+									"value": "6",
+									"type": "text"
+								},
+								{
+									"key": "dat",
+									"value": "{{$timestamp}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/giis-dmdk/mass-change-status",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"giis-dmdk",
+								"mass-change-status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "integration",
+			"item": [
+				{
+					"name": "integration",
+					"item": [
+						{
+							"name": "post",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "identifier",
+											"value": "dadata",
+											"type": "text"
+										},
+										{
+											"key": "setsV[key]",
+											"value": "16223871dad51bf45818d37db69118448d0a60de",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/integration",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"integration"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "identifier",
+											"value": "dadata",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "setsV[key]",
+											"value": "16223871dad51bf45818d37db69118448d0a60de",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "setsV[secret]",
+											"value": "0ef750ef4d55a6e1a69fb8ca8cc130f2feb34053",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "setsV[fullName]",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "isActive",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/integration/11",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"integration",
+										"11"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "dadata/balance",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "token",
+											"value": "16223871dad51bf45818d37db69118448d0a60de",
+											"type": "text"
+										},
+										{
+											"key": "secret",
+											"value": "0ef750ef4d55a6e1a69fb8ca8cc130f2feb34053",
+											"type": "text"
+										},
+										{
+											"key": "dsf",
+											"value": "{{$timestamp}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/integration/dadata/balance",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"integration",
+										"dadata",
+										"balance"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "info",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "identifier",
+											"value": "dadata",
+											"type": "text"
+										},
+										{
+											"key": "setsV[key]",
+											"value": "16223871dad51bf45818d37db69118448d0a60de",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/integration/info?expand=setsV",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"integration",
+										"info"
+									],
+									"query": [
+										{
+											"key": "expand",
+											"value": "setsV"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "kkm",
+			"item": [
+				{
+					"name": "session",
+					"item": [
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/kkm/session/39159?expand=cashCommandsWithPaginate",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"kkm",
+										"session",
+										"39159"
+									],
+									"query": [
+										{
+											"key": "expand",
+											"value": "cashCommandsWithPaginate"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "contract-lombard-sign-merge",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/kkm/session/contract-lombard-sign-merge/transaction/338836",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"kkm",
+										"session",
+										"contract-lombard-sign-merge",
+										"transaction",
+										"338836"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "close",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{base_url}}/kkm/session/close",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"kkm",
+										"session",
+										"close"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "kkt",
+					"item": [
+						{
+							"name": "current",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/kkm/kkt/current",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"kkm",
+										"kkt",
+										"current"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "kkm/command",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/kkm/command?command=RegisterCheck",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"kkm",
+								"command"
+							],
+							"query": [
+								{
+									"key": "command",
+									"value": "RegisterCheck"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "lead",
+			"item": [
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/lead?expand=products,name,counteragentName&product=Кольцо",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"lead"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "products,name,counteragentName"
+								},
+								{
+									"key": "product",
+									"value": "Кольцо"
+								},
+								{
+									"key": "vvv",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "50",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "count",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/lead/count?condition[]=0",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"lead",
+								"count"
+							],
+							"query": [
+								{
+									"key": "condition[]",
+									"value": "0"
+								},
+								{
+									"key": "vvv",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "productIds[]",
+									"value": "146556",
+									"type": "text"
+								},
+								{
+									"key": "productCategoryId",
+									"value": "148",
+									"type": "text"
+								},
+								{
+									"key": "counteragentId",
+									"value": "541",
+									"type": "text"
+								},
+								{
+									"key": "condition",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "contacts[0][type]",
+									"value": "phone_mobile",
+									"type": "text"
+								},
+								{
+									"key": "contacts[0][value]",
+									"value": "+7(111)111-11-11",
+									"type": "text"
+								},
+								{
+									"key": "sourceId",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "products[]",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "ti",
+									"value": "{{$timestamp}}",
+									"type": "text"
+								},
+								{
+									"key": "contract",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "contractHasTariffId",
+									"value": "216",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/lead?expand=products,name,counteragentName",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"lead"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "products,name,counteragentName"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/lead?expand=products,name,leadProducts&per_page=50",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"lead"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "products,name,leadProducts"
+								},
+								{
+									"key": "product",
+									"value": "Ирина",
+									"disabled": true
+								},
+								{
+									"key": "vvv",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "50"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "put",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "conditionNot",
+									"value": "100",
+									"type": "text"
+								},
+								{
+									"key": "id",
+									"value": "68208",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Нохрина Дарья Владимировна",
+									"type": "text"
+								},
+								{
+									"key": "comment",
+									"value": "Не было паспорта. Должны прийти",
+									"type": "text"
+								},
+								{
+									"key": "condition",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "commission",
+									"type": "text"
+								},
+								{
+									"key": "contractId",
+									"value": "58678",
+									"type": "text"
+								},
+								{
+									"key": "counteragentId",
+									"value": "13167",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "departmentId",
+									"value": "18",
+									"type": "text"
+								},
+								{
+									"key": "responsibleId",
+									"value": "null",
+									"type": "text"
+								},
+								{
+									"key": "createdBy",
+									"value": "128",
+									"type": "text"
+								},
+								{
+									"key": "createdAt",
+									"value": "2022-07-03T09:05:33.000000Z",
+									"type": "text"
+								},
+								{
+									"key": "updatedAt",
+									"value": "2022-07-05T16:29:47.000000Z",
+									"type": "text"
+								},
+								{
+									"key": "explain",
+									"value": " \"{\\\"pageSize\\\": 50, \\\"productIds\\\": \\\"93967\\\"}\",",
+									"type": "text"
+								},
+								{
+									"key": "typeName",
+									"value": "Договор комиссии",
+									"type": "text"
+								},
+								{
+									"key": "conditionName",
+									"value": "Готов к сделке",
+									"type": "text"
+								},
+								{
+									"key": "clientName",
+									"value": "Нохрина Д.В.",
+									"type": "text"
+								},
+								{
+									"key": "clientId",
+									"value": "13156",
+									"type": "text"
+								},
+								{
+									"key": "contacts[0][id]",
+									"value": "71156",
+									"type": "text"
+								},
+								{
+									"key": "contacts[0][owner_id]",
+									"value": "68208",
+									"type": "text"
+								},
+								{
+									"key": "contacts[0][owner_table_name]",
+									"value": "lead",
+									"type": "text"
+								},
+								{
+									"key": "contacts[0][type]",
+									"value": "phone_mobile",
+									"type": "text"
+								},
+								{
+									"key": "contacts[0][value]",
+									"value": "+7(111)111-11-11",
+									"type": "text"
+								},
+								{
+									"key": "productIds[]",
+									"value": "93967",
+									"type": "text"
+								},
+								{
+									"key": "products[0][basePath]",
+									"value": "product",
+									"type": "text"
+								},
+								{
+									"key": "products[0][isNewRecord]",
+									"value": "false",
+									"type": "text"
+								},
+								{
+									"key": "products[0][id]",
+									"value": "93967",
+									"type": "text"
+								},
+								{
+									"key": "products[0][approvedUserId]",
+									"value": "null",
+									"type": "text"
+								},
+								{
+									"key": "products[0][instanceId]",
+									"value": "77495",
+									"type": "text"
+								},
+								{
+									"key": "products[0][estimateSum]",
+									"value": "2800.00",
+									"type": "text"
+								},
+								{
+									"key": "products[0][cost]",
+									"value": "2800.00",
+									"type": "text"
+								},
+								{
+									"key": "products[0][contractId]",
+									"value": "58678",
+									"type": "text"
+								},
+								{
+									"key": "products[0][condition]",
+									"value": "commission",
+									"type": "text"
+								},
+								{
+									"key": "contract",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "expand",
+									"value": "typeName,conditionName,clientName,clientId,contacts,productIds,products,userNameResponsible,marketingSourceName,productCategoryId",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/lead/68208",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"lead",
+								"68208"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "10",
+									"disabled": true
+								},
+								{
+									"key": "vvv",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "expand",
+									"value": "productsName",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "condition-change",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/lead/condition-change",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"lead",
+								"condition-change"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "marketing",
+			"item": [
+				{
+					"name": "marketing/source",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZGY4NGQ1MzgwNzUyODE4YjYxMjhiMDFiZmQzMDJjYTAzMWYzNmZkMzQxMWU1ZWQyMTY2MzBiZDg4NDNkOTAwNjE0ZWM4NTE3NmI3MDBhZDkiLCJpYXQiOjE2MzI5MDEyODkuNzQ4NDk0LCJuYmYiOjE2MzI5MDEyODkuNzQ4NDk4LCJleHAiOjE2NjQ0MzcyODkuNzQxMDQ4LCJzdWIiOiIyIiwic2NvcGVzIjpbIioiXX0.bqZcWoO1vbGehKgVIYdKzwEKax46PT3vU0NM8xGkRwOevrwcLef3fPaxsMqDtOsuW-Zbmvk9_N_W6xwtctXj-ho6qwM2of9kTGsgyFMpsmAPpHVddub0vXt-TWugu3LMHgi7oAEUQuaNJH1q1rYUsY6f7UGwiEjO-V1PiKURxy3NJewv-vyIP3HBIPqzIXeMOAt_m2kF8GEbzKXcPN8k6V7gZ_sVmaf-XH09oLvQWOHC9dwDS1cMGszsnuXVoRUluRUKncZd23W0H-VbwJ1fM7tL3p-aqD3paXV9DP9r2ZWbE1Ng_e8D9UvEBvLajok6LyKC9nzxGHiH796Pmu2XX6WTckQYCfsT98OcLRsuwZcdwti4jQTsIyT4hboLQqHuSiXjuua6Ops6ciIfU_DyOFDzMYf7ugd8h8nQ5a0bKqFPrWhXHhCEHEdW8lRVX_CWaIcMKZrOgykzgMQ1ApBVHoZ_AmpvSXBvpkOuOofAgKK6fs6rQl1soeJBOIjwOfsdXmoGf-Aixtc9-jIb1szKMxL8c-rCnEyyqu6xwsNA_8X17Br97vVbIwWgOKeHZoBQyco1U5IeuaATN42bihutHcrV42Acccz-_1qjuR8excFOj1yJmQdaaKqio6zzjEygwll2sN-sL5Ya78WGmBL_uLH5vRm3fKM_ZRFl5YHBKMo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/marketing/source",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"marketing",
+								"source"
+							],
+							"query": [
+								{
+									"key": "asc",
+									"value": "sort",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "marketing/category/all-list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZGY4NGQ1MzgwNzUyODE4YjYxMjhiMDFiZmQzMDJjYTAzMWYzNmZkMzQxMWU1ZWQyMTY2MzBiZDg4NDNkOTAwNjE0ZWM4NTE3NmI3MDBhZDkiLCJpYXQiOjE2MzI5MDEyODkuNzQ4NDk0LCJuYmYiOjE2MzI5MDEyODkuNzQ4NDk4LCJleHAiOjE2NjQ0MzcyODkuNzQxMDQ4LCJzdWIiOiIyIiwic2NvcGVzIjpbIioiXX0.bqZcWoO1vbGehKgVIYdKzwEKax46PT3vU0NM8xGkRwOevrwcLef3fPaxsMqDtOsuW-Zbmvk9_N_W6xwtctXj-ho6qwM2of9kTGsgyFMpsmAPpHVddub0vXt-TWugu3LMHgi7oAEUQuaNJH1q1rYUsY6f7UGwiEjO-V1PiKURxy3NJewv-vyIP3HBIPqzIXeMOAt_m2kF8GEbzKXcPN8k6V7gZ_sVmaf-XH09oLvQWOHC9dwDS1cMGszsnuXVoRUluRUKncZd23W0H-VbwJ1fM7tL3p-aqD3paXV9DP9r2ZWbE1Ng_e8D9UvEBvLajok6LyKC9nzxGHiH796Pmu2XX6WTckQYCfsT98OcLRsuwZcdwti4jQTsIyT4hboLQqHuSiXjuua6Ops6ciIfU_DyOFDzMYf7ugd8h8nQ5a0bKqFPrWhXHhCEHEdW8lRVX_CWaIcMKZrOgykzgMQ1ApBVHoZ_AmpvSXBvpkOuOofAgKK6fs6rQl1soeJBOIjwOfsdXmoGf-Aixtc9-jIb1szKMxL8c-rCnEyyqu6xwsNA_8X17Br97vVbIwWgOKeHZoBQyco1U5IeuaATN42bihutHcrV42Acccz-_1qjuR8excFOj1yJmQdaaKqio6zzjEygwll2sN-sL5Ya78WGmBL_uLH5vRm3fKM_ZRFl5YHBKMo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/marketing/category/all-list",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"marketing",
+								"category",
+								"all-list"
+							],
+							"query": [
+								{
+									"key": "asc",
+									"value": "sort",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "organization",
+			"item": [
+				{
+					"name": "contract",
+					"item": [
+						{
+							"name": "all-list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/organization/contract/all-list",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"organization",
+										"contract",
+										"all-list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "organization",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/organization",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"organization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organization/update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/organization",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"organization"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organization/department",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": " 4",
+									"type": "text"
+								},
+								{
+									"key": "broId",
+									"value": " null",
+									"type": "text"
+								},
+								{
+									"key": "organizationId",
+									"value": " 5",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": " Адлер-Демократическая",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": " г. Сочи, ул. Демократическая, д. 54/3",
+									"type": "text"
+								},
+								{
+									"key": "cityId",
+									"value": " 55",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": " +7 (938) 400-28-48",
+									"type": "text"
+								},
+								{
+									"key": "timeOffset",
+									"value": " 10800",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": " 10",
+									"type": "text"
+								},
+								{
+									"key": "statusString",
+									"value": " Actives",
+									"type": "text"
+								},
+								{
+									"key": "createdAt",
+									"value": " 2020-03-10T10:45:09.000000Z",
+									"type": "text"
+								},
+								{
+									"key": "updatedAt",
+									"value": " 2022-04-25T15:20:40.000000Z",
+									"type": "text"
+								},
+								{
+									"key": "tempOgrn",
+									"value": " 1182375008958",
+									"type": "text"
+								},
+								{
+									"key": "tempKpp",
+									"value": " 236745004",
+									"type": "text"
+								},
+								{
+									"key": "tempFn",
+									"value": " 9960440300068841",
+									"type": "text"
+								},
+								{
+									"key": "lastNumber",
+									"value": " 1",
+									"type": "text"
+								},
+								{
+									"key": "expand",
+									"value": "ticketCurrentId,ticketNextId,lastNumber",
+									"type": "text"
+								},
+								{
+									"key": "ticketCurrentId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/organization/department/4",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"organization",
+								"department",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organization/department/all-list Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/organization/department/available",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"organization",
+								"department",
+								"available"
+							],
+							"query": [
+								{
+									"key": "allOrg",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organization/storage/all-list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/organization/storage/all-list?isCurrentDepartment=1",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"organization",
+								"storage",
+								"all-list"
+							],
+							"query": [
+								{
+									"key": "isCurrentDepartment",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "all-with-giis-setting-list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/organization/all-with-giis-setting-list",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"organization",
+								"all-with-giis-setting-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "organization/department",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/organization/department/4?expand=ticketCurrentId,ticketNexts,lastNumber,name",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"organization",
+								"department",
+								"4"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "ticketCurrentId,ticketNexts,lastNumber,name"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "paymentSystem",
+			"item": [
+				{
+					"name": "operation",
+					"item": [
+						{
+							"name": "paid-out",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://karman-api.loc/payment-system/operation/paid-out/1",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"payment-system",
+										"operation",
+										"paid-out",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://karman-api.loc/payment-system/operation/?expand=clientName",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"payment-system",
+										"operation",
+										""
+									],
+									"query": [
+										{
+											"key": "expand",
+											"value": "clientName"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "post",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "systemId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "typeId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "cost",
+											"value": "3000",
+											"type": "text"
+										},
+										{
+											"key": "contractId",
+											"value": "3495",
+											"type": "text"
+										},
+										{
+											"key": "tl",
+											"value": "{{$timestamp}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://karman-api.loc/payment-system/operation",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"payment-system",
+										"operation"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "product",
+			"item": [
+				{
+					"name": "product",
+					"item": [
+						{
+							"name": "update (tehnika)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "instanceName",
+											"value": "ТЕЛЕФОН cyber 13 pro 256 гб",
+											"type": "text"
+										},
+										{
+											"key": "cost",
+											"value": "1000",
+											"type": "text"
+										},
+										{
+											"key": "instanceCategoryId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "estimateSum",
+											"value": "2000",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://karman-api.loc/product/146543",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"146543"
+									],
+									"query": [
+										{
+											"key": "per_page",
+											"value": "15",
+											"disabled": true
+										},
+										{
+											"key": "expand",
+											"value": "instance,description,descriptionFormattedArr",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create (jewelry)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "condition",
+											"value": "temp",
+											"type": "text"
+										},
+										{
+											"key": "counteragent",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "accessory",
+											"type": "text"
+										},
+										{
+											"key": "instanceCategoryId",
+											"value": "6",
+											"type": "text"
+										},
+										{
+											"key": "instanceName",
+											"value": "Браслет золото 585 вес 4.08гр без вставок",
+											"type": "text"
+										},
+										{
+											"key": "mainInstanceCategoryId",
+											"value": "79",
+											"type": "text"
+										},
+										{
+											"key": "estimateSum",
+											"value": "3000",
+											"type": "text"
+										},
+										{
+											"key": "cost",
+											"value": "2400",
+											"type": "text"
+										},
+										{
+											"key": "instanceCategoryTypeId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "instanceV[6]",
+											"value": "77",
+											"type": "text"
+										},
+										{
+											"key": "instanceV[7]",
+											"value": "98",
+											"type": "text"
+										},
+										{
+											"key": "instanceV[14]",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "instanceV[13]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "t",
+											"value": "{{$timestamp}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/product?expand=description,instance,instanceV,instanceCategoryId,instanceDescription,instanceDescriptionFormatted,instanceName,instanceUniqueIdentity,categoryId,hasActiveContract,fullName,categoryJewerly,files,dmdkUin,userCreateName,comments,isEdit,descriptionFormattedArr,departmentAddress,organizationName",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"product"
+									],
+									"query": [
+										{
+											"key": "expand",
+											"value": "description,instance,instanceV,instanceCategoryId,instanceDescription,instanceDescriptionFormatted,instanceName,instanceUniqueIdentity,categoryId,hasActiveContract,fullName,categoryJewerly,files,dmdkUin,userCreateName,comments,isEdit,descriptionFormattedArr,departmentAddress,organizationName"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update (jewelry)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "instanceCategoryId",
+											"value": "6",
+											"type": "text"
+										},
+										{
+											"key": "instanceName",
+											"value": "Кольцо Золотое золото 585 3г",
+											"type": "text"
+										},
+										{
+											"key": "mainInstanceCategoryId",
+											"value": "79",
+											"type": "text"
+										},
+										{
+											"key": "estimateSum",
+											"value": "3000",
+											"type": "text"
+										},
+										{
+											"key": "cost",
+											"value": "2400",
+											"type": "text"
+										},
+										{
+											"key": "instanceCategoryTypeId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "instanceV[6]",
+											"value": "77",
+											"type": "text"
+										},
+										{
+											"key": "instanceV[7]",
+											"value": "98",
+											"type": "text"
+										},
+										{
+											"key": "instanceV[14]",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "instanceV[13]",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/product/146562?expand=description,instance,instanceV,instanceCategoryId,instanceDescription,instanceDescriptionFormatted,instanceName,instanceUniqueIdentity,categoryId,hasActiveContract,fullName,categoryJewerly,files,dmdkUin,userCreateName,comments,isEdit,descriptionFormattedArr,departmentAddress,organizationName",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"product",
+										"146562"
+									],
+									"query": [
+										{
+											"key": "expand",
+											"value": "description,instance,instanceV,instanceCategoryId,instanceDescription,instanceDescriptionFormatted,instanceName,instanceUniqueIdentity,categoryId,hasActiveContract,fullName,categoryJewerly,files,dmdkUin,userCreateName,comments,isEdit,descriptionFormattedArr,departmentAddress,organizationName"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create (auto)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "instanceV[730]",
+											"value": "6743",
+											"type": "text"
+										},
+										{
+											"key": "instanceV[735]",
+											"value": "6745",
+											"type": "text"
+										},
+										{
+											"key": "instanceV[745]",
+											"value": "9559",
+											"type": "text"
+										},
+										{
+											"key": "counteragent",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "type",
+											"value": "accessory",
+											"type": "text"
+										},
+										{
+											"key": "instanceCategoryId",
+											"value": "6",
+											"type": "text"
+										},
+										{
+											"key": "instanceName",
+											"value": "Машина",
+											"type": "text"
+										},
+										{
+											"key": "mainInstanceCategoryId",
+											"value": "79",
+											"type": "text"
+										},
+										{
+											"key": "estimateSum",
+											"value": "3000",
+											"type": "text"
+										},
+										{
+											"key": "cost",
+											"value": "2400",
+											"type": "text"
+										},
+										{
+											"key": "instanceCategoryTypeId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "instanceV[6]",
+											"value": "77",
+											"type": "text"
+										},
+										{
+											"key": "instanceV[7]",
+											"value": "98",
+											"type": "text"
+										},
+										{
+											"key": "instanceV[14]",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "instanceV[13]",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/product",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create (tehnika)",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "counteragent",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "5",
+											"type": "text"
+										},
+										{
+											"key": "instanceCategoryId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "instanceName",
+											"value": "ТЕЛЕФОН cyber 13 pro 256 гб",
+											"type": "text"
+										},
+										{
+											"key": "mainInstanceCategoryId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "estimateSum",
+											"value": "3000",
+											"type": "text"
+										},
+										{
+											"key": "cost",
+											"value": "2400",
+											"type": "text"
+										},
+										{
+											"key": "instanceCategoryTypeId",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/product",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "sellPrice",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "instanceName",
+											"value": "name",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "instanceCategoryId",
+											"value": "5",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "storageId",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "estimateSum",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "cost",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "categoryId",
+											"value": "5",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://karman-api.loc/product/146686",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"146686"
+									],
+									"query": [
+										{
+											"key": "sellPrice",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/product",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"product"
+									],
+									"query": [
+										{
+											"key": "expand",
+											"value": "okpd2",
+											"disabled": true
+										},
+										{
+											"key": "categoryId[]",
+											"value": "5",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://karman-api.loc/product/146542?expand=productToOrganizationProductId,description,instance,instanceV,instanceCategoryId,instanceDescription,instanceDescriptionFormatted,instanceName,instanceUniqueIdentity,categoryId,hasActiveContract,fullName,categoryJewerly,files,dmdkUin,userCreateName,comments,isEdit,descriptionFormattedArr,departmentAddress,organizationName",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"146542"
+									],
+									"query": [
+										{
+											"key": "expand",
+											"value": "okpd2",
+											"disabled": true
+										},
+										{
+											"key": "expand",
+											"value": "productToOrganizationProductId,description,instance,instanceV,instanceCategoryId,instanceDescription,instanceDescriptionFormatted,instanceName,instanceUniqueIdentity,categoryId,hasActiveContract,fullName,categoryJewerly,files,dmdkUin,userCreateName,comments,isEdit,descriptionFormattedArr,departmentAddress,organizationName"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show Copy",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://karman-api.loc/product/138860?expand=valueName,instanceValues,description,instance,instanceV,instanceCategoryId,instanceDescription,instanceDescriptionFormatted,instanceName,instanceUniqueIdentity,categoryId,hasActiveContract,fullName,categoryJewerly,files,dmdkUin,userCreateName,comments,isEdit,descriptionFormattedArr,departmentAddress,organizationName",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"138860"
+									],
+									"query": [
+										{
+											"key": "expand",
+											"value": "okpd2",
+											"disabled": true
+										},
+										{
+											"key": "expand",
+											"value": "valueName,instanceValues,description,instance,instanceV,instanceCategoryId,instanceDescription,instanceDescriptionFormatted,instanceName,instanceUniqueIdentity,categoryId,hasActiveContract,fullName,categoryJewerly,files,dmdkUin,userCreateName,comments,isEdit,descriptionFormattedArr,departmentAddress,organizationName"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "move",
+					"item": [
+						{
+							"name": "product/move/13",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://karman-api.loc/product/move",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"move"
+									],
+									"query": [
+										{
+											"key": "expand",
+											"value": "moveProductStorageToId",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "product/move-product",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://karman-api.loc/product/move-product",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"move-product"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "product/move-all",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://karman-api.loc/product/move-all",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"move-all"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "store",
+					"item": [
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "sellAmountMin",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "shopStatus",
+											"value": "5",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://karman-api.loc/product/store/1",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"store",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://karman-api.loc/product/store/120370?expand=instanceDescription,conditionName,responsibleName,contractNumber,instanceName,instanceUniqueIdentity,categoryName,storageName,approvedName,dmdkUin,categoryJewerly,instanceValues,paramName,valueName,files,moveId,packId,statusName,comments,userCreateName,isEdit,oldProductId,inventoryProduct",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"store",
+										"120370"
+									],
+									"query": [
+										{
+											"key": "expand",
+											"value": "instanceDescription,conditionName,responsibleName,contractNumber,instanceName,instanceUniqueIdentity,categoryName,storageName,approvedName,dmdkUin,categoryJewerly,instanceValues,paramName,valueName,files,moveId,packId,statusName,comments,userCreateName,isEdit,oldProductId,inventoryProduct"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "instanceCategory",
+					"item": [
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://karman-api.loc/product/instance/category",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"instance",
+										"category"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all-group-list",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://karman-api.loc/product/instance-category/all-group-list",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"instance-category",
+										"all-group-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all-list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://karman-api.loc/product/instance/category/all-list",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"instance",
+										"category",
+										"all-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://karman-api.loc/product/instance-category/79?mainCategoryIds=[]&name=Основные изделия&pId=5&sort=2&typeId=1",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"instance-category",
+										"79"
+									],
+									"query": [
+										{
+											"key": "mainCategoryIds",
+											"value": "[]"
+										},
+										{
+											"key": "name",
+											"value": "Основные изделия"
+										},
+										{
+											"key": "pId",
+											"value": "5"
+										},
+										{
+											"key": "sort",
+											"value": "2"
+										},
+										{
+											"key": "typeId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "instanceParam",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://karman-api.loc/product/instance-param",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"instance-param"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "change-parent-params",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://karman-api.loc/product/instance-param/change-parent-params",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"instance-param",
+										"change-parent-params"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "categoryId",
+											"value": "22",
+											"type": "text"
+										},
+										{
+											"key": "children[0][sort]",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "children[0][defaultId]",
+											"value": "null",
+											"type": "text"
+										},
+										{
+											"key": "children[0][dmdkKey]",
+											"value": "null",
+											"type": "text"
+										},
+										{
+											"key": "children[0][dependId]",
+											"value": "null",
+											"type": "text"
+										},
+										{
+											"key": "children[0][name]",
+											"value": "Apple",
+											"type": "text"
+										},
+										{
+											"key": "children[0][categoryIds][]",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "children[0][categoryIds][]",
+											"value": "16",
+											"type": "text"
+										},
+										{
+											"key": "children[0][categoryIds][]",
+											"value": "4",
+											"type": "text"
+										},
+										{
+											"key": "children[0][categoryIds][]",
+											"value": "67",
+											"type": "text"
+										},
+										{
+											"key": "children[1][sort]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "children[1][defaultId]",
+											"value": "null",
+											"type": "text"
+										},
+										{
+											"key": "children[1][dmdkKey]",
+											"value": "null",
+											"type": "text"
+										},
+										{
+											"key": "children[1][dependId]",
+											"value": "null",
+											"type": "text"
+										},
+										{
+											"key": "children[1][name]",
+											"value": "Samsung",
+											"type": "text"
+										},
+										{
+											"key": "expand",
+											"value": "children",
+											"type": "text"
+										},
+										{
+											"key": "isActive",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "isMany",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "isUseInProductName",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Производитель",
+											"type": "text"
+										},
+										{
+											"key": "pId",
+											"value": "null",
+											"type": "text"
+										},
+										{
+											"key": "required",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "sort",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "typeId",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "efe",
+											"value": "{{$timestamp}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://karman-api.loc/product/instance-param",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"instance-param"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "categoryId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "children[0][sort]",
+											"value": "0",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "children[0][defaultId]",
+											"value": "null",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "children[0][dmdkKey]",
+											"value": "null",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "children[0][dependId]",
+											"value": "null",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "children[0][name]",
+											"value": "Apple",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "children[0][categoryIds][]",
+											"value": "2",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "children[0][categoryIds][]",
+											"value": "16",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "children[0][categoryIds][]",
+											"value": "4",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "children[0][categoryIds][]",
+											"value": "67",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "children[1][sort]",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "children[1][defaultId]",
+											"value": "null",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "children[1][dmdkKey]",
+											"value": "null",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "children[1][dependId]",
+											"value": "null",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "children[1][name]",
+											"value": "Samsung",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "expand",
+											"value": "children",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "isActive",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "isMany",
+											"value": "0",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "isUseInProductName",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "name",
+											"value": "Производитель",
+											"type": "text"
+										},
+										{
+											"key": "pId",
+											"value": "null",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "required",
+											"value": "0",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "sort",
+											"value": "0",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "typeId",
+											"value": "3",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "efe",
+											"value": "{{$timestamp}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://karman-api.loc/product/instance-param/730",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"instance-param",
+										"730"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all-group-list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/product/instance-param/all-group-list",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"product",
+										"instance-param",
+										"all-group-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all-precious-list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://karman-api.loc/product/instance-param/all-precious-list",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"instance-param",
+										"all-precious-list"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "transfer",
+					"item": [
+						{
+							"name": "get-merge-act",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/product/transfer/get-merge-act?date=08.05.2024&organizationContractId=1",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"product",
+										"transfer",
+										"get-merge-act"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "08.05.2024"
+										},
+										{
+											"key": "organizationContractId",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "printer",
+			"item": [
+				{
+					"name": "product",
+					"item": [
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "instanceV[730]",
+											"value": "921",
+											"type": "text"
+										},
+										{
+											"key": "instanceV[731]",
+											"value": "922",
+											"type": "text"
+										},
+										{
+											"key": "instanceName",
+											"value": "iPhone 14",
+											"type": "text"
+										},
+										{
+											"key": "cost",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "instanceCategoryId",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "storageId",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "estimateSum",
+											"value": "100",
+											"type": "text"
+										},
+										{
+											"key": "instanceV[6]",
+											"value": "77",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "instanceV[7]",
+											"value": "98",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "instanceV[14]",
+											"value": "12.8456",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "instanceV[13]",
+											"value": "3.1233",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://karman-api.loc/product/120373",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"120373"
+									],
+									"query": [
+										{
+											"key": "per_page",
+											"value": "15",
+											"disabled": true
+										},
+										{
+											"key": "expand",
+											"value": "instance,description,descriptionFormattedArr",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "create",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "instanceCategoryId",
+											"value": "148",
+											"type": "text"
+										},
+										{
+											"key": "instanceCategoryTypeId",
+											"value": "3",
+											"type": "text"
+										},
+										{
+											"key": "mainInstanceCategoryId",
+											"value": "148",
+											"type": "text"
+										},
+										{
+											"key": "instanceV[730]",
+											"value": "921",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "instanceV[731]",
+											"value": "922",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "instanceName",
+											"value": "bmw e3",
+											"type": "text"
+										},
+										{
+											"key": "estimateSum",
+											"value": "1000",
+											"type": "text"
+										},
+										{
+											"key": "cost",
+											"value": "500",
+											"type": "text"
+										},
+										{
+											"key": "instanceV[740]",
+											"value": "bmw",
+											"type": "text"
+										},
+										{
+											"key": "instanceV[770]",
+											"value": "de",
+											"type": "text"
+										},
+										{
+											"key": "isInstanceHandsV",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "dsfsdf",
+											"value": "{{$timestamp}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/product?expand=description,instance,instanceV,instanceCategoryId,instanceDescription,instanceDescriptionFormatted,instanceName,instanceUniqueIdentity,categoryId,hasActiveContract,fullName,categoryJewerly,files,dmdkUin,userCreateName,comments,isEdit,descriptionFormattedArr,departmentAddress,organizationName",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"product"
+									],
+									"query": [
+										{
+											"key": "expand",
+											"value": "description,instance,instanceV,instanceCategoryId,instanceDescription,instanceDescriptionFormatted,instanceName,instanceUniqueIdentity,categoryId,hasActiveContract,fullName,categoryJewerly,files,dmdkUin,userCreateName,comments,isEdit,descriptionFormattedArr,departmentAddress,organizationName"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "sellPrice",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "instanceName",
+											"value": "name",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "instanceCategoryId",
+											"value": "5",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "storageId",
+											"value": "1",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "estimateSum",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "cost",
+											"value": "10",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "categoryId",
+											"value": "5",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://karman-api.loc/product/83928",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"83928"
+									],
+									"query": [
+										{
+											"key": "sellPrice",
+											"value": "1",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://karman-api.loc/product?categoryId[]=5",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product"
+									],
+									"query": [
+										{
+											"key": "expand",
+											"value": "okpd2",
+											"disabled": true
+										},
+										{
+											"key": "categoryId[]",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://karman-api.loc/product/138862?expand=description,instance,instanceV,instanceCategoryId,instanceDescription,instanceDescriptionFormatted,instanceName,instanceUniqueIdentity,categoryId,hasActiveContract,fullName,categoryJewerly,files,dmdkUin,userCreateName,comments,isEdit,descriptionFormattedArr,departmentAddress,organizationName",
+									"protocol": "http",
+									"host": [
+										"karman-api",
+										"loc"
+									],
+									"path": [
+										"product",
+										"138862"
+									],
+									"query": [
+										{
+											"key": "expand",
+											"value": "okpd2",
+											"disabled": true
+										},
+										{
+											"key": "expand",
+											"value": "description,instance,instanceV,instanceCategoryId,instanceDescription,instanceDescriptionFormatted,instanceName,instanceUniqueIdentity,categoryId,hasActiveContract,fullName,categoryJewerly,files,dmdkUin,userCreateName,comments,isEdit,descriptionFormattedArr,departmentAddress,organizationName"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "printer 183",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Ломбард - Договор потребительского займа (Залоговый билет) - Страница 3",
+									"type": "text"
+								},
+								{
+									"key": "organizationId",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "outputId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "provider",
+									"value": "contract_lombard_sign",
+									"type": "text"
+								},
+								{
+									"key": "sortingNumber",
+									"value": "12",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "templateId",
+									"value": "1JiBp6SUYKK6PAMbjBDZQzx66rRG6AAe_v4uRXDYXAeQ",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "word",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/printer/183",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"printer",
+								"183"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "person",
+			"item": [
+				{
+					"name": "person/update-delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNGMyYWYzYzkwM2IzNWI0NDc5NjIxMzM1ZWM5Zjk1NmUyZGVmNTc2YzcwNDIwNWViMzU3NTU2ZTMzMDUyZjgzMGZhOWUwNmNjYTBlYzlkMDciLCJpYXQiOjE2ODk4NDM1OTEuNDM1ODIxLCJuYmYiOjE2ODk4NDM1OTEuNDM1ODIyLCJleHAiOjE3MjE0NjU5OTEuNDE5ODQxLCJzdWIiOiI5NSIsInNjb3BlcyI6WyIqIl19.MjEKNyu93SX8uW7X1LxGF2OmfjammC6klNxRLJfhvKI3e1P2zR4UaTtiQv6QIBkyFSHHDMAk2GI2EZuCJlUpz6RnU_wupYV-U-eKoObBs55l9BK7Y-Yxue56TSZOW7hhNC7mi8fCCB95HwOYBcUE5uSXIDC5owvSQcq7DPPB5End1jdjlTOFSWQWF7R1H3u77teq-8POA5IdiX47MJUaMHkwCoxBna4madAgpY8EBYPTj0u_-lu5Zj7TyhHoXg6ChEizsiOImbFQ0WuQ7mFSeLHOFcF_zoWXaCsHcb-XAiIqsZXvk1ZKuGuIcHXEV0MsruqKaNZxc20SloBhaDJ3fQaagF3veE0ynd-qTpJ3YnSBTAea-4iu6sl-qRVxKkZIKNSvx5lyqR7m60DUomn4yAw6aOcg0eT2hvroREY2ay18ilxBqTjMyeoxitytug6FYsw4UBpb9PhBAyYI8QAUVO5b7Twgf5pBv6qyVwyky-CCLjp-rkLFDMha7Z3D9y2w5H3MGcXZBWHBxLBk7Up0adM11mvNj0fmTBisI4LFpd-O6_VBqKlspz0n5c3Vz2FxOvol9MU8yCW6U4UdnqO_WS_IO_-yB6VFEH2hdXpyl8iiErpUmmRZxBnytixIkweUvFQHv22VhmqOritq_a1U_AVY3CBRZMNnf_J7y49j-N0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/person/upload-delete/21805",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"person",
+								"upload-delete",
+								"21805"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstName",
+									"value": "Иван",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "Cамойлов",
+									"type": "text"
+								},
+								{
+									"key": "middleName",
+									"value": "Федорович",
+									"type": "text"
+								},
+								{
+									"key": "birthDate",
+									"value": "20.04.1992",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "1111",
+									"type": "text"
+								},
+								{
+									"key": "citizenship",
+									"value": "RU",
+									"type": "text"
+								},
+								{
+									"key": "addressEqual",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "documents[0][type]",
+									"value": "passport",
+									"type": "text"
+								},
+								{
+									"key": "documents[0][number]",
+									"value": "0717 277823",
+									"type": "text"
+								},
+								{
+									"key": "documents[0][departmentCode]",
+									"value": "1245",
+									"type": "text"
+								},
+								{
+									"key": "documents[0][issued]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "documents[0][primary]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "documents[0][date]",
+									"value": "20.04.1991",
+									"type": "text"
+								},
+								{
+									"key": "contacts[0][type]",
+									"value": "mobile",
+									"type": "text"
+								},
+								{
+									"key": "contacts[0][value]",
+									"value": "111111111111",
+									"type": "text"
+								},
+								{
+									"key": "contacts[0][formatted]",
+									"value": "+78005553535",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "contacts[0][comment]",
+									"value": "Лучше позвонить, чем у кого то занимать",
+									"type": "text"
+								},
+								{
+									"key": "endDate",
+									"value": "2020-04-20",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "contacts[1][value]",
+									"value": "2222222222",
+									"type": "text"
+								},
+								{
+									"key": "contacts[1][type]",
+									"value": "phone",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/person/12365",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"person",
+								"12365"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "person",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://karman-api.loc/person?status=10&per_page=15&checkDocuments=1&expand=contacts,createdName,personContact,checkDocuments,userNameVerify",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"person"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "documents",
+									"disabled": true
+								},
+								{
+									"key": "ss",
+									"value": "Алибеков Расим Увейис Оглы",
+									"disabled": true
+								},
+								{
+									"key": "createdAt",
+									"value": "23.11.2021",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "10"
+								},
+								{
+									"key": "name",
+									"value": "Залаев",
+									"disabled": true
+								},
+								{
+									"key": "per_page",
+									"value": "15"
+								},
+								{
+									"key": "vvv",
+									"value": null,
+									"disabled": true
+								},
+								{
+									"key": "checkDocuments",
+									"value": "1"
+								},
+								{
+									"key": "expand",
+									"value": "contacts,createdName,personContact,checkDocuments,userNameVerify"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "person-document/document-list",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://karman-api.loc/person-document/document-list",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"person-document",
+								"document-list"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "documents",
+									"disabled": true
+								},
+								{
+									"key": "ss",
+									"value": "Алибеков Расим Увейис Оглы",
+									"disabled": true
+								},
+								{
+									"key": "createdAt",
+									"value": "23.11.2021",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "person",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "firstName",
+									"value": "даниил",
+									"type": "text"
+								},
+								{
+									"key": "lastName",
+									"value": "шеркожухов",
+									"type": "text"
+								},
+								{
+									"key": "gender",
+									"value": "male",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "dsfds",
+									"type": "text"
+								},
+								{
+									"key": "citizenship",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "birthDate",
+									"value": "20.04.1963",
+									"type": "text"
+								},
+								{
+									"key": "contacts[0][type]",
+									"value": "phone",
+									"type": "text"
+								},
+								{
+									"key": "contacts[0][value]",
+									"value": "847848482",
+									"type": "text"
+								},
+								{
+									"key": "documents[0][type]",
+									"value": "military_card",
+									"type": "text"
+								},
+								{
+									"key": "documents[0][number]",
+									"value": "123456789",
+									"type": "text"
+								},
+								{
+									"key": "documents[1][type]",
+									"value": "resident_card",
+									"type": "text"
+								},
+								{
+									"key": "documents[0][primary]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "documents[0][date]",
+									"value": "2020",
+									"type": "text"
+								},
+								{
+									"key": "number",
+									"value": "1",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fileStorage[0][name]",
+									"value": "test.jpg",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fileStorage[0][originName]",
+									"value": "testOrigin",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fileStorage[0][entity]",
+									"value": "entity",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fileStorage[0][entityBundle]",
+									"value": "entityBundle",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fileStorage[0][entityId]",
+									"value": "entityId",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "fileStorage[0][type]",
+									"value": "type",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "tempObjectId",
+									"value": "6uet5184y1637324488343",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "middleName",
+									"value": "андреевич",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{base_url}}/person",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"person"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Шеркожухов Даниил",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "person/all-list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/person/all-list",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"person",
+								"all-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "person-document",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/person-document",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"person-document"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "person-migration",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZGY4NGQ1MzgwNzUyODE4YjYxMjhiMDFiZmQzMDJjYTAzMWYzNmZkMzQxMWU1ZWQyMTY2MzBiZDg4NDNkOTAwNjE0ZWM4NTE3NmI3MDBhZDkiLCJpYXQiOjE2MzI5MDEyODkuNzQ4NDk0LCJuYmYiOjE2MzI5MDEyODkuNzQ4NDk4LCJleHAiOjE2NjQ0MzcyODkuNzQxMDQ4LCJzdWIiOiIyIiwic2NvcGVzIjpbIioiXX0.bqZcWoO1vbGehKgVIYdKzwEKax46PT3vU0NM8xGkRwOevrwcLef3fPaxsMqDtOsuW-Zbmvk9_N_W6xwtctXj-ho6qwM2of9kTGsgyFMpsmAPpHVddub0vXt-TWugu3LMHgi7oAEUQuaNJH1q1rYUsY6f7UGwiEjO-V1PiKURxy3NJewv-vyIP3HBIPqzIXeMOAt_m2kF8GEbzKXcPN8k6V7gZ_sVmaf-XH09oLvQWOHC9dwDS1cMGszsnuXVoRUluRUKncZd23W0H-VbwJ1fM7tL3p-aqD3paXV9DP9r2ZWbE1Ng_e8D9UvEBvLajok6LyKC9nzxGHiH796Pmu2XX6WTckQYCfsT98OcLRsuwZcdwti4jQTsIyT4hboLQqHuSiXjuua6Ops6ciIfU_DyOFDzMYf7ugd8h8nQ5a0bKqFPrWhXHhCEHEdW8lRVX_CWaIcMKZrOgykzgMQ1ApBVHoZ_AmpvSXBvpkOuOofAgKK6fs6rQl1soeJBOIjwOfsdXmoGf-Aixtc9-jIb1szKMxL8c-rCnEyyqu6xwsNA_8X17Br97vVbIwWgOKeHZoBQyco1U5IeuaATN42bihutHcrV42Acccz-_1qjuR8excFOj1yJmQdaaKqio6zzjEygwll2sN-sL5Ya78WGmBL_uLH5vRm3fKM_ZRFl5YHBKMo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/person-migration",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"person-migration"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "person-contact",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZGY4NGQ1MzgwNzUyODE4YjYxMjhiMDFiZmQzMDJjYTAzMWYzNmZkMzQxMWU1ZWQyMTY2MzBiZDg4NDNkOTAwNjE0ZWM4NTE3NmI3MDBhZDkiLCJpYXQiOjE2MzI5MDEyODkuNzQ4NDk0LCJuYmYiOjE2MzI5MDEyODkuNzQ4NDk4LCJleHAiOjE2NjQ0MzcyODkuNzQxMDQ4LCJzdWIiOiIyIiwic2NvcGVzIjpbIioiXX0.bqZcWoO1vbGehKgVIYdKzwEKax46PT3vU0NM8xGkRwOevrwcLef3fPaxsMqDtOsuW-Zbmvk9_N_W6xwtctXj-ho6qwM2of9kTGsgyFMpsmAPpHVddub0vXt-TWugu3LMHgi7oAEUQuaNJH1q1rYUsY6f7UGwiEjO-V1PiKURxy3NJewv-vyIP3HBIPqzIXeMOAt_m2kF8GEbzKXcPN8k6V7gZ_sVmaf-XH09oLvQWOHC9dwDS1cMGszsnuXVoRUluRUKncZd23W0H-VbwJ1fM7tL3p-aqD3paXV9DP9r2ZWbE1Ng_e8D9UvEBvLajok6LyKC9nzxGHiH796Pmu2XX6WTckQYCfsT98OcLRsuwZcdwti4jQTsIyT4hboLQqHuSiXjuua6Ops6ciIfU_DyOFDzMYf7ugd8h8nQ5a0bKqFPrWhXHhCEHEdW8lRVX_CWaIcMKZrOgykzgMQ1ApBVHoZ_AmpvSXBvpkOuOofAgKK6fs6rQl1soeJBOIjwOfsdXmoGf-Aixtc9-jIb1szKMxL8c-rCnEyyqu6xwsNA_8X17Br97vVbIwWgOKeHZoBQyco1U5IeuaATN42bihutHcrV42Acccz-_1qjuR8excFOj1yJmQdaaKqio6zzjEygwll2sN-sL5Ya78WGmBL_uLH5vRm3fKM_ZRFl5YHBKMo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/person-contact?id=15216",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"person-contact"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "15216"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload/person",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://karman-api.loc/upload/person",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"upload",
+								"person"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "upload",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/sherkozhuhov.da/Downloads/test.jpg",
+									"disabled": true
+								},
+								{
+									"key": "model",
+									"value": "Person",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "dt",
+									"value": "1637130867",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "136",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/upload/person",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"upload",
+								"person"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "price",
+			"item": [
+				{
+					"name": "price/metal-precious/1",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "isActive",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "isDefault",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Золото",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/price/metal-precious/1",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"price",
+								"metal-precious",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "price/metal",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "estimationProductionCost",
+									"value": "2550",
+									"type": "text"
+								},
+								{
+									"key": "estimationScrapCost",
+									"value": "2400",
+									"type": "text"
+								},
+								{
+									"key": "isActive",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "isDefault",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "preciousId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "purchaseProductionCost",
+									"value": "2400",
+									"type": "text"
+								},
+								{
+									"key": "purchaseScrapCost",
+									"value": "2350",
+									"type": "text"
+								},
+								{
+									"key": "saleProductionCost",
+									"value": "3500",
+									"type": "text"
+								},
+								{
+									"key": "saleScrapCost",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "sampleId",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/price/metal/3",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"price",
+								"metal",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "price/metal",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "estimationProductionCost",
+									"value": "2000",
+									"type": "text"
+								},
+								{
+									"key": "estimationScrapCost",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "isActive",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "isDefault",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "preciousId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "purchaseProductionCost",
+									"value": "2001",
+									"type": "text"
+								},
+								{
+									"key": "purchaseScrapCost",
+									"value": "1001",
+									"type": "text"
+								},
+								{
+									"key": "saleProductionCost",
+									"value": "2002",
+									"type": "text"
+								},
+								{
+									"key": "saleScrapCost",
+									"value": "1002",
+									"type": "text"
+								},
+								{
+									"key": "sampleId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/price/metal?expand=estimationScrapCost,estimationProductionCost,saleScrapCost,saleProductionCost,purchaseScrapCost,purchaseProductionCost",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"price",
+								"metal"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "estimationScrapCost,estimationProductionCost,saleScrapCost,saleProductionCost,purchaseScrapCost,purchaseProductionCost"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "price/metal Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "estimationProductionCost",
+									"value": "2000",
+									"type": "text"
+								},
+								{
+									"key": "estimationScrapCost",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "isActive",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "isDefault",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "preciousId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "purchaseProductionCost",
+									"value": "2001",
+									"type": "text"
+								},
+								{
+									"key": "purchaseScrapCost",
+									"value": "1001",
+									"type": "text"
+								},
+								{
+									"key": "saleProductionCost",
+									"value": "2002",
+									"type": "text"
+								},
+								{
+									"key": "saleScrapCost",
+									"value": "1002",
+									"type": "text"
+								},
+								{
+									"key": "sampleId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/price/metal-sample?id=5&expand=productInstanceParamName",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"price",
+								"metal-sample"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								},
+								{
+									"key": "expand",
+									"value": "productInstanceParamName"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "price/metal/default-cost",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "estimationProductionCost",
+									"value": "2000",
+									"type": "text"
+								},
+								{
+									"key": "estimationScrapCost",
+									"value": "1000",
+									"type": "text"
+								},
+								{
+									"key": "isActive",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "isDefault",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "preciousId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "purchaseProductionCost",
+									"value": "2001",
+									"type": "text"
+								},
+								{
+									"key": "purchaseScrapCost",
+									"value": "1001",
+									"type": "text"
+								},
+								{
+									"key": "saleProductionCost",
+									"value": "2002",
+									"type": "text"
+								},
+								{
+									"key": "saleScrapCost",
+									"value": "1002",
+									"type": "text"
+								},
+								{
+									"key": "sampleId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/price/metal/default-cost?expand=saleProductionCost,purchaseProductionCost,estimationProductionCost,estimation",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"price",
+								"metal",
+								"default-cost"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "saleProductionCost,purchaseProductionCost,estimationProductionCost,estimation"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "price/metal-sample",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "isActive",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "isDefault",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "preciousId",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "productInstanceParamId",
+									"value": "97",
+									"type": "text"
+								},
+								{
+									"key": "treg",
+									"value": "{{$timestamp}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/price/metal-sample",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"price",
+								"metal-sample"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "price/metal-sample/all-list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/price/metal-sample/all-list",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"price",
+								"metal-sample",
+								"all-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "price/metal-precious/all-list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/price/metal-precious/all-list",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"price",
+								"metal-precious",
+								"all-list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "rate-gold",
+			"item": [
+				{
+					"name": "settings/rate-gold/show-item",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "selling",
+									"value": "110",
+									"type": "text"
+								},
+								{
+									"key": "acceptance",
+									"value": "205",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/settings/rate-gold/show-item",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"settings",
+								"rate-gold",
+								"show-item"
+							],
+							"query": [
+								{
+									"key": "files",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "settings/rate-gold",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "selling",
+									"value": "110",
+									"type": "text"
+								},
+								{
+									"key": "acceptance",
+									"value": "205",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/settings/rate-gold",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"settings",
+								"rate-gold"
+							],
+							"query": [
+								{
+									"key": "files",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "roistat",
+			"item": [
+				{
+					"name": "roistat/export",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/roistat/export?user=karman_roistat&token=bd446cc88221f2817c565a4155f681d8&action=import_scheme",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"roistat",
+								"export"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "karman_roistat"
+								},
+								{
+									"key": "token",
+									"value": "bd446cc88221f2817c565a4155f681d8"
+								},
+								{
+									"key": "action",
+									"value": "import_scheme"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "roistat/export/add-orders",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/roistat/export/add-orders",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"roistat",
+								"export",
+								"add-orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "roistat/import",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/roistat/import",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"roistat",
+								"import"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "role",
+			"item": [
+				{
+					"name": "role",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "dtCreate",
+									"value": "2022-04-26T13:29:33.000000Z",
+									"type": "text"
+								},
+								{
+									"key": "dtUpdate",
+									"value": "2022-04-26T13:29:33.000000Z",
+									"type": "text"
+								},
+								{
+									"key": "guardName",
+									"value": "api",
+									"type": "text"
+								},
+								{
+									"key": "isActive",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "1111",
+									"type": "text"
+								},
+								{
+									"key": "userIdCreate",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "rolePermissions[0][permissionId]",
+									"value": "3",
+									"type": "text"
+								},
+								{
+									"key": "rolePermissions[0][roleId]",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "rolePermissions[0][scopeId]",
+									"value": "0",
+									"type": "text"
+								},
+								{
+									"key": "userIds[0]",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "userIds[1]",
+									"value": "36",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/role/1",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"role",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "role",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://karman-api.loc/role/all-group-list",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"role",
+								"all-group-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "permission",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://karman-api.loc/role/all-group-list",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"role",
+								"all-group-list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "report",
+			"item": [
+				{
+					"name": "ProvisionsForImpairment",
+					"item": [
+						{
+							"name": "index",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{base_url}}/report/provisions-for-impairment?date[0]=31.03.2024",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"report",
+										"provisions-for-impairment"
+									],
+									"query": [
+										{
+											"key": "date[0]",
+											"value": "31.03.2024"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "searh",
+			"item": [
+				{
+					"name": "settings",
+					"item": [
+						{
+							"name": "Products_1/sortable-attributes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://127.0.0.1:7701/indexes/Products_1/settings/sortable-attributes",
+									"protocol": "http",
+									"host": [
+										"127",
+										"0",
+										"0",
+										"1"
+									],
+									"port": "7701",
+									"path": [
+										"indexes",
+										"Products_1",
+										"settings",
+										"sortable-attributes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "search",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/search/point?search=iphone&page=1&per_page=100",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"search",
+								"point"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "iphone"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "index",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/search?search=КУ002880&page=1&per_page=20",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "КУ002880"
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "per_page",
+									"value": "20"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "source",
+			"item": [
+				{
+					"name": "source/group",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/service?id=13",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"service"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "13"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "source",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/report/source?dateFrom=24.11.2022&dateTo=25.11.2022&expand=sourceFullName",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"report",
+								"source"
+							],
+							"query": [
+								{
+									"key": "dateFrom",
+									"value": "24.11.2022"
+								},
+								{
+									"key": "dateTo",
+									"value": "25.11.2022"
+								},
+								{
+									"key": "expand",
+									"value": "sourceFullName"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "source",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/source?expand=webhook",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"source"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "webhook"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "report/source",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/report/source?expand=sourceFullName",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"report",
+								"source"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "sourceFullName"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "source/webhook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "phone",
+									"value": "+7 (915) 072-02-20",
+									"type": "text"
+								},
+								{
+									"key": "department_id",
+									"value": "36",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Tests",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/source/in?k=6258321e63a5c",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"source",
+								"in"
+							],
+							"query": [
+								{
+									"key": "k",
+									"value": "6258321e63a5c"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "service",
+			"item": [
+				{
+					"name": "service",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/service/2?expand=cost",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"service",
+								"2"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "cost"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "service/1",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "cost",
+									"value": "1499",
+									"type": "text"
+								},
+								{
+									"key": "name",
+									"value": "Фиксированная",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/service/2",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"service",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "service/all-list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiODZiNzY3YWU4YmYzOTBkNTMwNGQyYjFlYmUzMjVmYzNjZTk4ZjRhOGZhOGM4NTBiNDdhNGQ3NjhiMzZmYTMzYWVlNzY2ZmY3OGJlOGExNzMiLCJpYXQiOjE2MzI4MDkxNjQuNjYyMjM1LCJuYmYiOjE2MzI4MDkxNjQuNjYyMjQyLCJleHAiOjE2NjQzNDUxNjQuNjMxOTkyLCJzdWIiOiIyIiwic2NvcGVzIjpbIioiXX0.W_sYTLLODyuXcB_4XlnF1bnnNE6cmYfIqZbo5Pcx3fjnEbNKMuMoD_PbODRaZ4vvdNAL2RYuuI-ZmDVtP5BYVJq8m6jvjH9O8v45uoj-o7t4aW_dDemLSEWWa52vmCqgTPiy6c7O4xaW_nOqmcrSgSz2osudmZb1UJe28kZAQsWDTL-E-i-kMY1BHUZAQrekJi1lIurspOHOaJXDXjihljw_iEaFH5-55LJOTEiKZpMVpWPGwUyi2kaEI_0rQjO6ndN0AiARhCT-a9CFSFcO2er9nLSOZtsikAFuMuWZ7LNXvhq-SFyFnc36PtdLUh8AYdN54nBz5zG3f8MHrCwkHDiXnREc4K0rh55RtSmKxq55815P7p_AlwXBgGZRPfojLwvqY6i4vRYJR4mWai_2wl0K2vUaSkVccBtGSts9PGawvsV_j1nIpE_qftuJC6JoavmBsaNNBwVKUjfXoISxN3L5mw9HwtsX3ZeQa58llXOK0jqaA8z4mdRZGSlN2LAMgnC6VfZhQyPsLs78tQzTAPIufOZZqZe-k8vtLP2ctWS7kLcr6LU_Xi4fiQHnwgJ_l6YSHOlMP_T4n9jkdKu1k3tpiZlZoDe46dFaybwqORNi9hsv2QTfxZ5nzpahxfgtYN8NI1VM968B5uxsapDV_nzM-GV3qKwqpKzemid0B4w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/service/all-list",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"service",
+								"all-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "service-cost",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/service-cost",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"service-cost"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "service-cost/all-list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiODZiNzY3YWU4YmYzOTBkNTMwNGQyYjFlYmUzMjVmYzNjZTk4ZjRhOGZhOGM4NTBiNDdhNGQ3NjhiMzZmYTMzYWVlNzY2ZmY3OGJlOGExNzMiLCJpYXQiOjE2MzI4MDkxNjQuNjYyMjM1LCJuYmYiOjE2MzI4MDkxNjQuNjYyMjQyLCJleHAiOjE2NjQzNDUxNjQuNjMxOTkyLCJzdWIiOiIyIiwic2NvcGVzIjpbIioiXX0.W_sYTLLODyuXcB_4XlnF1bnnNE6cmYfIqZbo5Pcx3fjnEbNKMuMoD_PbODRaZ4vvdNAL2RYuuI-ZmDVtP5BYVJq8m6jvjH9O8v45uoj-o7t4aW_dDemLSEWWa52vmCqgTPiy6c7O4xaW_nOqmcrSgSz2osudmZb1UJe28kZAQsWDTL-E-i-kMY1BHUZAQrekJi1lIurspOHOaJXDXjihljw_iEaFH5-55LJOTEiKZpMVpWPGwUyi2kaEI_0rQjO6ndN0AiARhCT-a9CFSFcO2er9nLSOZtsikAFuMuWZ7LNXvhq-SFyFnc36PtdLUh8AYdN54nBz5zG3f8MHrCwkHDiXnREc4K0rh55RtSmKxq55815P7p_AlwXBgGZRPfojLwvqY6i4vRYJR4mWai_2wl0K2vUaSkVccBtGSts9PGawvsV_j1nIpE_qftuJC6JoavmBsaNNBwVKUjfXoISxN3L5mw9HwtsX3ZeQa58llXOK0jqaA8z4mdRZGSlN2LAMgnC6VfZhQyPsLs78tQzTAPIufOZZqZe-k8vtLP2ctWS7kLcr6LU_Xi4fiQHnwgJ_l6YSHOlMP_T4n9jkdKu1k3tpiZlZoDe46dFaybwqORNi9hsv2QTfxZ5nzpahxfgtYN8NI1VM968B5uxsapDV_nzM-GV3qKwqpKzemid0B4w",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/service-cost/all-list",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"service-cost",
+								"all-list"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "support",
+			"item": [
+				{
+					"name": "support/category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/support/category/11?expand=userCreateName,userAvatarFile,userResponsibleName,coExecutors,roleResponsibleName",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"support",
+								"category",
+								"11"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "userCreateName,userAvatarFile,userResponsibleName,coExecutors,roleResponsibleName"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "support/category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/support/category/11?expand=userCreateName,userAvatarFile,userResponsibleName,coExecutors,roleResponsibleName",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"support",
+								"category",
+								"11"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "userCreateName,userAvatarFile,userResponsibleName,coExecutors,roleResponsibleName"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "support/ticket",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "title",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "categoryId",
+									"value": "9",
+									"type": "text"
+								},
+								{
+									"key": "priority",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "message",
+									"value": "test",
+									"type": "text"
+								},
+								{
+									"key": "date",
+									"value": "{{$timestamp}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/support/ticket",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"support",
+								"ticket"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transaction",
+			"item": [
+				{
+					"name": "transaction",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/transaction/338770",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"transaction",
+								"338770"
+							],
+							"query": [
+								{
+									"key": "typeName[]",
+									"value": "contract_commission_sell_product",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "product/move/transaction",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fundId",
+									"value": "616",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/product/move/transaction",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"product",
+								"move",
+								"transaction"
+							],
+							"query": [
+								{
+									"key": "fundId",
+									"value": "616",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "transaction/type-list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/transaction/type-list",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"transaction",
+								"type-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "transaction/operation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/transaction/operation?type=pko&date=1",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"transaction",
+								"operation"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "pko"
+								},
+								{
+									"key": "date",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "transaction/61269",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZGY4NGQ1MzgwNzUyODE4YjYxMjhiMDFiZmQzMDJjYTAzMWYzNmZkMzQxMWU1ZWQyMTY2MzBiZDg4NDNkOTAwNjE0ZWM4NTE3NmI3MDBhZDkiLCJpYXQiOjE2MzI5MDEyODkuNzQ4NDk0LCJuYmYiOjE2MzI5MDEyODkuNzQ4NDk4LCJleHAiOjE2NjQ0MzcyODkuNzQxMDQ4LCJzdWIiOiIyIiwic2NvcGVzIjpbIioiXX0.bqZcWoO1vbGehKgVIYdKzwEKax46PT3vU0NM8xGkRwOevrwcLef3fPaxsMqDtOsuW-Zbmvk9_N_W6xwtctXj-ho6qwM2of9kTGsgyFMpsmAPpHVddub0vXt-TWugu3LMHgi7oAEUQuaNJH1q1rYUsY6f7UGwiEjO-V1PiKURxy3NJewv-vyIP3HBIPqzIXeMOAt_m2kF8GEbzKXcPN8k6V7gZ_sVmaf-XH09oLvQWOHC9dwDS1cMGszsnuXVoRUluRUKncZd23W0H-VbwJ1fM7tL3p-aqD3paXV9DP9r2ZWbE1Ng_e8D9UvEBvLajok6LyKC9nzxGHiH796Pmu2XX6WTckQYCfsT98OcLRsuwZcdwti4jQTsIyT4hboLQqHuSiXjuua6Ops6ciIfU_DyOFDzMYf7ugd8h8nQ5a0bKqFPrWhXHhCEHEdW8lRVX_CWaIcMKZrOgykzgMQ1ApBVHoZ_AmpvSXBvpkOuOofAgKK6fs6rQl1soeJBOIjwOfsdXmoGf-Aixtc9-jIb1szKMxL8c-rCnEyyqu6xwsNA_8X17Br97vVbIwWgOKeHZoBQyco1U5IeuaATN42bihutHcrV42Acccz-_1qjuR8excFOj1yJmQdaaKqio6zzjEygwll2sN-sL5Ya78WGmBL_uLH5vRm3fKM_ZRFl5YHBKMo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://karman-api.loc/transaction/61394",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"transaction",
+								"61394"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "transaction/prev/61478",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZGY4NGQ1MzgwNzUyODE4YjYxMjhiMDFiZmQzMDJjYTAzMWYzNmZkMzQxMWU1ZWQyMTY2MzBiZDg4NDNkOTAwNjE0ZWM4NTE3NmI3MDBhZDkiLCJpYXQiOjE2MzI5MDEyODkuNzQ4NDk0LCJuYmYiOjE2MzI5MDEyODkuNzQ4NDk4LCJleHAiOjE2NjQ0MzcyODkuNzQxMDQ4LCJzdWIiOiIyIiwic2NvcGVzIjpbIioiXX0.bqZcWoO1vbGehKgVIYdKzwEKax46PT3vU0NM8xGkRwOevrwcLef3fPaxsMqDtOsuW-Zbmvk9_N_W6xwtctXj-ho6qwM2of9kTGsgyFMpsmAPpHVddub0vXt-TWugu3LMHgi7oAEUQuaNJH1q1rYUsY6f7UGwiEjO-V1PiKURxy3NJewv-vyIP3HBIPqzIXeMOAt_m2kF8GEbzKXcPN8k6V7gZ_sVmaf-XH09oLvQWOHC9dwDS1cMGszsnuXVoRUluRUKncZd23W0H-VbwJ1fM7tL3p-aqD3paXV9DP9r2ZWbE1Ng_e8D9UvEBvLajok6LyKC9nzxGHiH796Pmu2XX6WTckQYCfsT98OcLRsuwZcdwti4jQTsIyT4hboLQqHuSiXjuua6Ops6ciIfU_DyOFDzMYf7ugd8h8nQ5a0bKqFPrWhXHhCEHEdW8lRVX_CWaIcMKZrOgykzgMQ1ApBVHoZ_AmpvSXBvpkOuOofAgKK6fs6rQl1soeJBOIjwOfsdXmoGf-Aixtc9-jIb1szKMxL8c-rCnEyyqu6xwsNA_8X17Br97vVbIwWgOKeHZoBQyco1U5IeuaATN42bihutHcrV42Acccz-_1qjuR8excFOj1yJmQdaaKqio6zzjEygwll2sN-sL5Ya78WGmBL_uLH5vRm3fKM_ZRFl5YHBKMo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "cancel",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://karman-api.loc/transaction/prev/61528?expand=currentState",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"transaction",
+								"prev",
+								"61528"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "currentState"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "transaction",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiZGY4NGQ1MzgwNzUyODE4YjYxMjhiMDFiZmQzMDJjYTAzMWYzNmZkMzQxMWU1ZWQyMTY2MzBiZDg4NDNkOTAwNjE0ZWM4NTE3NmI3MDBhZDkiLCJpYXQiOjE2MzI5MDEyODkuNzQ4NDk0LCJuYmYiOjE2MzI5MDEyODkuNzQ4NDk4LCJleHAiOjE2NjQ0MzcyODkuNzQxMDQ4LCJzdWIiOiIyIiwic2NvcGVzIjpbIioiXX0.bqZcWoO1vbGehKgVIYdKzwEKax46PT3vU0NM8xGkRwOevrwcLef3fPaxsMqDtOsuW-Zbmvk9_N_W6xwtctXj-ho6qwM2of9kTGsgyFMpsmAPpHVddub0vXt-TWugu3LMHgi7oAEUQuaNJH1q1rYUsY6f7UGwiEjO-V1PiKURxy3NJewv-vyIP3HBIPqzIXeMOAt_m2kF8GEbzKXcPN8k6V7gZ_sVmaf-XH09oLvQWOHC9dwDS1cMGszsnuXVoRUluRUKncZd23W0H-VbwJ1fM7tL3p-aqD3paXV9DP9r2ZWbE1Ng_e8D9UvEBvLajok6LyKC9nzxGHiH796Pmu2XX6WTckQYCfsT98OcLRsuwZcdwti4jQTsIyT4hboLQqHuSiXjuua6Ops6ciIfU_DyOFDzMYf7ugd8h8nQ5a0bKqFPrWhXHhCEHEdW8lRVX_CWaIcMKZrOgykzgMQ1ApBVHoZ_AmpvSXBvpkOuOofAgKK6fs6rQl1soeJBOIjwOfsdXmoGf-Aixtc9-jIb1szKMxL8c-rCnEyyqu6xwsNA_8X17Br97vVbIwWgOKeHZoBQyco1U5IeuaATN42bihutHcrV42Acccz-_1qjuR8excFOj1yJmQdaaKqio6zzjEygwll2sN-sL5Ya78WGmBL_uLH5vRm3fKM_ZRFl5YHBKMo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "http://karman-api.loc/transaction/next/61494?expand=currentState",
+							"protocol": "http",
+							"host": [
+								"karman-api",
+								"loc"
+							],
+							"path": [
+								"transaction",
+								"next",
+								"61494"
+							],
+							"query": [
+								{
+									"key": "expand",
+									"value": "currentState"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "user",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all-list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user/all-list",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"all-list"
+									],
+									"query": [
+										{
+											"key": "createdName[]",
+											"value": "47",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "menu-item",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiMGVjZDgxYzY5YzE0N2ZkYzA3Zjk3YTIyODdhNmJjNzBmNWFjZmE1MzY1NTIzNTlmMjMyNzI1YzRkZDQ5YTQ4YTllYTc3ZDY5MzQyYmYyM2MiLCJpYXQiOjE2MzI4OTUwMjcuMTQ2MjYxLCJuYmYiOjE2MzI4OTUwMjcuMTQ2MjY1LCJleHAiOjE2NjQ0MzEwMjcuMTAxMjYyLCJzdWIiOiIyIiwic2NvcGVzIjpbIioiXX0.lPUxT-tfhzftOPVwI3g5LX3VI6Jrnpdjom2FULNELiJHaQiwFsW-EJYWbj31T9k8lY2Ud90RGgRf6BZlJ6IrKGul3CZsuf7Y7jHCWi0h9xe338fCnYxRKeU3kbRcY1y9f2AlYSpcNfc7Y_14unIdt4ZHm8TfDTgVod9EYcyrDwK-fa3VoTBd9HgQIL-OM_Rs1laCl1HC4Oif-a5tWaZbQwB32SAZ3hoI_sFcE3bPvpDpzfQaAx29qfpo3TNjE6wD07_kDPwWzsYN-8XuIvxulHZUDIdEkmV7QH0EDky0rgwJNqIUrQafu0k2UDvbbV6sarCsLsaLRr_hWWygY55SV2gVQbWFDcrGQpIaNltfdLvufS6rfl1JljIgF5Dmx-l5EJ1ZPCknRfqyK7Wc_EACIWTvV8IhifebQPAWN4QHOMwzUWTYmXlwPdegCNqcaBWq_7eLZat6UzWti4WUQn1zoNHy1cHtx9tDvVVOMLs8Kyrx3JrmMPHFIERkwKywii0CBguTi95pVx-XAAiC78UWuGpka3gNLBQfumxar55TrDuRqJ6U7TCi0tjV27lenqDaVatqbJqQOk-Ogykiw2xljiWpbWHtxeIMXpIG4dkeFoZ_QfsBlomvsjEcJJ0imQwk5IC8nfQuYU1rQguA1vbcXnygeCoWqZd7uGxc3vJFo4U",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/user/menu-item",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"menu-item"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "compensation",
+					"item": [
+						{
+							"name": "compensation/get-count",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{base_url}}/user/compensation/get-count?userId=36&dtStartCreate=1699956800",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"user",
+										"compensation",
+										"get-count"
+									],
+									"query": [
+										{
+											"key": "userId",
+											"value": "36"
+										},
+										{
+											"key": "dtStartCreate",
+											"value": "1699956800"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "wiki",
+			"item": [
+				{
+					"name": "article",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/wiki/article?isExternalLink=",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"wiki",
+										"article"
+									],
+									"query": [
+										{
+											"key": "isExternalLink",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/wiki/article/68?expand=like",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"wiki",
+										"article",
+										"68"
+									],
+									"query": [
+										{
+											"key": "expand",
+											"value": "like"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all-list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/wiki/all-list",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"wiki",
+										"all-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "test 99",
+											"type": "text"
+										},
+										{
+											"key": "isActive",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "body",
+											"value": "<p><a href=\"http://karman111-api.loc/storage/1/temp/tg_image_1837730635_WikiArticle_vvkrw73hw1705587943088.pdf\">7810704382_22122023_444_1</a><a href=\"http://karman-api.loc/storage/1/temp/7810704382_22122023_444_1_WikiArticle_vvkrw73hw1705587943088.pdf\">7810704382_22122023_444_1</a></p>",
+											"type": "text"
+										},
+										{
+											"key": "tagIds[]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "tagIds[]",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "sort",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "categoryId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "isNotify",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/wiki/article/79",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"wiki",
+										"article",
+										"79"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "store",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "name",
+											"value": "test 100",
+											"type": "text"
+										},
+										{
+											"key": "isActive",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "body",
+											"value": "<p><a href=\"http://karman111-api.loc/storage/1/temp/tg_image_1837730635_WikiArticle_vvkrw73hw1705587943088.pdf\">7810704382_22122023_444_1</a><a href=\"http://karman-api.loc/storage/1/temp/7810704382_22122023_444_1_WikiArticle_vvkrw73hw1705587943088.pdf\">7810704382_22122023_444_1</a></p>",
+											"type": "text"
+										},
+										{
+											"key": "tagIds[]",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "tagIds[]",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "sort",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "categoryId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "isNotify",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "t",
+											"value": "{{$timestamp}}",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/wiki/article",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"wiki",
+										"article"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "toggle-active",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "title",
+											"value": "test",
+											"type": "text"
+										},
+										{
+											"key": "status",
+											"value": "Активно",
+											"type": "text"
+										},
+										{
+											"key": "body",
+											"value": "<p><a href=\"http://karman111-api.loc/storage/1/temp/tg_image_1837730635_WikiArticle_vvkrw73hw1705587943088.pdf\">7810704382_22122023_444_1</a><a href=\"http://karman-api.loc/storage/1/temp/7810704382_22122023_444_1_WikiArticle_vvkrw73hw1705587943088.pdf\">7810704382_22122023_444_1</a></p>",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/wiki/article/toggle-active/89",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"wiki",
+										"article",
+										"toggle-active",
+										"89"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "mass-destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "ids[]",
+											"value": "89",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/wiki/article/mass-destroy",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"wiki",
+										"article",
+										"mass-destroy"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "tag",
+					"item": [
+						{
+							"name": "all-list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/wiki/tag/all-list",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"wiki",
+										"tag",
+										"all-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "destroy",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "ids[]",
+											"value": "89",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/wiki/tag/3",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"wiki",
+										"tag",
+										"3"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "category",
+					"item": [
+						{
+							"name": "all-list",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/wiki/category/all-list",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"wiki",
+										"category",
+										"all-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "delete",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/wiki/category/all-list",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"wiki",
+										"category",
+										"all-list"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all-list-formatted",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/wiki/category/all-list-formatted",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"wiki",
+										"category",
+										"all-list-formatted"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "all-list-new-formatted",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/wiki/category/all-list-new-formatted",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"wiki",
+										"category",
+										"all-list-new-formatted"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "likes",
+					"item": [
+						{
+							"name": "get-likes",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/wiki/article/get-likes?articleId=68",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"wiki",
+										"article",
+										"get-likes"
+									],
+									"query": [
+										{
+											"key": "articleId",
+											"value": "68"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "like",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "typeId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "isActive",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "articleId",
+											"value": "68",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{base_url}}/wiki/article/like",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"wiki",
+										"article",
+										"like"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "wiki",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/wiki?ss=Техника&expand=tagNames",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"wiki"
+									],
+									"query": [
+										{
+											"key": "ss",
+											"value": "Техника"
+										},
+										{
+											"key": "expand",
+											"value": "tagNames"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "article/comment",
+					"item": [
+						{
+							"name": "index",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{base_url}}/wiki/article/comment?articleId=6",
+									"host": [
+										"{{base_url}}"
+									],
+									"path": [
+										"wiki",
+										"article",
+										"comment"
+									],
+									"query": [
+										{
+											"key": "articleId",
+											"value": "6"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "combat",
+			"item": [
+				{
+					"name": "counteragent-search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNThlZTMzOTk4NjEyOWQ5NjFiNTE2ZGYwOTIyZmU5ZWRlM2M2OGM2MGZkNmZmNGFmYmMzMTMwNTc3MDc0NmM0MDNmNWNkMGRiMDlkZWNkYjkiLCJpYXQiOjE3MTE5NzAzNTEuMTExMDAxLCJuYmYiOjE3MTE5NzAzNTEuMTExMDA2LCJleHAiOjE3NDM1MDYzNTEuMTAyMzc4LCJzdWIiOiIxNjMiLCJzY29wZXMiOlsiKiJdfQ.X5HvXIy6GwEJfbVVIwo2NLazS6rfaIOSjkfv1jLnBuBCQ5UFvtwzoo4IhFQkRysv6dMPo9xdBqtUcnegqedvGyURsgFVo3wNG8XabTUio_hm9sN4DTOLwBftzHOkzyZM8JiGqXAnK4C1_WwKOvorpAY44WYGAAviEH9MjqRVdoRpp4dZFImqwsFX9u_E2X0e1Rfm50Y44d3vTeCW6HBUVjAziScAkMFyMw-oeA1ow6eLqFDSr7cex5gK7eDYK80EKcCI0aprZLh4C3yMBwCJjWjjeStr6J8dy1QGO9L7fZJ_KcW-a7IsS5fhRVWNLV7HtR4AqRrX6bxEtAphGUGzflUPKsJ_OBdtrmGczE1pHqudOdPVwmxeCEuqWdtV-Zj_1RS-D7HuC3yZnLfnBJYtnk6ftAPkoDdQ7L0Tm5MLcFkYvWiDZlyinWZvMYC2YZmUTzX9YQZueNDqhGkf_fdL8K8Hpq0a7u9CGW9JTUc8d1WnpxqgLtVYQWabbf_peAD1bgktVNcKXfc0VF0K84NNyWsyZT8RyFSnxBT0HyGYusf8mR8zUKnJfuIoSOW19pJssHrjDZj02zrwXP1Kst1F-6VAc0EqR8eQZ6al9FTw6nd39moya2BODEJjCCEXHJS-AAOhGBMB0p6X7sH5o5FhJ2lnPWtbiMYRSRMJdE5oYNM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "https://erp-api.karman24.ru/counteragent/search?ss=Ткаченко Богдан Александрович",
+							"protocol": "https",
+							"host": [
+								"erp-api",
+								"karman24",
+								"ru"
+							],
+							"path": [
+								"counteragent",
+								"search"
+							],
+							"query": [
+								{
+									"key": "ss",
+									"value": "Ткаченко Богдан Александрович"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "point/search",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiNThlZTMzOTk4NjEyOWQ5NjFiNTE2ZGYwOTIyZmU5ZWRlM2M2OGM2MGZkNmZmNGFmYmMzMTMwNTc3MDc0NmM0MDNmNWNkMGRiMDlkZWNkYjkiLCJpYXQiOjE3MTE5NzAzNTEuMTExMDAxLCJuYmYiOjE3MTE5NzAzNTEuMTExMDA2LCJleHAiOjE3NDM1MDYzNTEuMTAyMzc4LCJzdWIiOiIxNjMiLCJzY29wZXMiOlsiKiJdfQ.X5HvXIy6GwEJfbVVIwo2NLazS6rfaIOSjkfv1jLnBuBCQ5UFvtwzoo4IhFQkRysv6dMPo9xdBqtUcnegqedvGyURsgFVo3wNG8XabTUio_hm9sN4DTOLwBftzHOkzyZM8JiGqXAnK4C1_WwKOvorpAY44WYGAAviEH9MjqRVdoRpp4dZFImqwsFX9u_E2X0e1Rfm50Y44d3vTeCW6HBUVjAziScAkMFyMw-oeA1ow6eLqFDSr7cex5gK7eDYK80EKcCI0aprZLh4C3yMBwCJjWjjeStr6J8dy1QGO9L7fZJ_KcW-a7IsS5fhRVWNLV7HtR4AqRrX6bxEtAphGUGzflUPKsJ_OBdtrmGczE1pHqudOdPVwmxeCEuqWdtV-Zj_1RS-D7HuC3yZnLfnBJYtnk6ftAPkoDdQ7L0Tm5MLcFkYvWiDZlyinWZvMYC2YZmUTzX9YQZueNDqhGkf_fdL8K8Hpq0a7u9CGW9JTUc8d1WnpxqgLtVYQWabbf_peAD1bgktVNcKXfc0VF0K84NNyWsyZT8RyFSnxBT0HyGYusf8mR8zUKnJfuIoSOW19pJssHrjDZj02zrwXP1Kst1F-6VAc0EqR8eQZ6al9FTw6nd39moya2BODEJjCCEXHJS-AAOhGBMB0p6X7sH5o5FhJ2lnPWtbiMYRSRMJdE5oYNM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "https://erp-api.karman24.ru/search/point?search=Ткаченко Богдан",
+							"protocol": "https",
+							"host": [
+								"erp-api",
+								"karman24",
+								"ru"
+							],
+							"path": [
+								"search",
+								"point"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Ткаченко Богдан"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "testing",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "admin@karman24.ru",
+									"type": "text"
+								},
+								{
+									"key": "client_secret",
+									"value": "1yTlMlWCprXrkpzX5rMFFUHUTNEnkuLOgYRkGXUV",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "814815a",
+									"type": "text"
+								},
+								{
+									"key": "scope",
+									"value": "*",
+									"type": "text"
+								},
+								{
+									"key": "grant_type",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://erp-api-test2.karman24.ru/user/auth-login",
+							"protocol": "https",
+							"host": [
+								"erp-api-test2",
+								"karman24",
+								"ru"
+							],
+							"path": [
+								"user",
+								"auth-login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "export",
+			"item": [
+				{
+					"name": "smart",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{base_url}}/export/smart?transactionTypeIds[]=contract_lombard_buyout_early_merge&dateFrom=29.05.2024&dateTo=30.05.2024&departmentIds[]=122&type=operations",
+							"host": [
+								"{{base_url}}"
+							],
+							"path": [
+								"export",
+								"smart"
+							],
+							"query": [
+								{
+									"key": "transactionTypeIds[]",
+									"value": "contract_lombard_buyout_early_merge"
+								},
+								{
+									"key": "dateFrom",
+									"value": "29.05.2024"
+								},
+								{
+									"key": "dateTo",
+									"value": "30.05.2024"
+								},
+								{
+									"key": "departmentIds[]",
+									"value": "122"
+								},
+								{
+									"key": "type",
+									"value": "operations"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiYmUzN2Y5OTNkOTNmZTJiZTM1YzNjMGIxZWY5NmM2OGIxNmZjNDQxZTNmMTk1ODhjZmU4ZTNiYTI1ZjE5ZGVmNzlmMGQxZWQ1M2FjOWRiYTciLCJpYXQiOjE3MTYyODc0OTMuMDM3MDIzLCJuYmYiOjE3MTYyODc0OTMuMDM3MDIzLCJleHAiOjE3NDc4MjM0OTMuMDMxMDI0LCJzdWIiOiIyIiwic2NvcGVzIjpbIioiXX0.iuNJsvLbhaewpbV_eZS9d9BUV5MSPPKbpoaKku3L0ORGr6OdK7vvHwSehEUIu1YvYEmDfJB9g5z0zuIA3w4HvX5cwpfLN1kqM51LrtsrvBqxcSBvu0DLLUNoNn8DKfWKD2gJhnnscXHMT3SAeSBNx-UmR32N12g-Ln1ZhB7uICA_jkmeCBw1_RGv0MEJ0glki1n0pY_okR8XHOwlSe-jq8JFW12yuNOHKd8JNBQwEHOW9otQceMSK2IjLRS1gDbA-yS_kC7y92t_diAt-7GtG25WKVYvfNB00d_mfkc0_1Gfl08rri5HEbpjbBt3CWz-Mbj_Mc_7oK54uHfwZpAsyvx1uj08yEaozzbIBrhaluk90UWMXJGWNynSiq4rvAjZhv0e5iXUSpkzt_U_CXPWFlZ7E8ZCVxst36ht9mYWqhf-D4yf9l9ZYb-3EFRjLmOjGyz53pMA27OlXg3b8OF0mxgNEzNjdeo9Ffk2f9QMR152gorQt-cJ6XrNPqqRag2pgDPJYnFPxCPqtLm7p7i5Pif5L9fmV2fIh6sdlNbaULjZ6VFl73i7zOpuOxP2tIpHdhzV2c88jlf1DMt6KwBv4UvRVdmhQ--BULyjurHE17dPg0rQltmuS3YXA5uxdOYUSa5nWEZYvNyIuWEg7BxQ11OB_LH23X1mQczXmCE-Z1k",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "base_url",
+			"value": "http://karman-api.loc"
+		}
+	]
+}
