@@ -4,18 +4,57 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
+        .H2-text{
+            color: blue;
+        }
+
         .H6-text{
             color: red;
+        }
+
+        #H3-text{
+            font-size: 50px;
+        }
+
+       div.Python > a{
+            color: green;
+        }
+
+        ul li{
+            color: red;
+        }
+
+        input[type="text"]{
+            background-color: red;
+        }
+
+        input[type="text"]:hover{
+            background-color: blue;
+        }
+
+        a:hover{
+            color: blue;
+        }
+
+        li::marker{
+            color: green;
+        }
+
+        ul > li:nth-child(2){
+            color: blue;
         }
     </style>
 </head>
 <body>
-<div>
-    <h1 class="H6-text">Mороженноное</h1>
+<div class="Python">
+    <h1 class="h1-text">Mороженноное</h1>
+    <h1 class="H1 text">Mороженноное</h1>
+    <h2 class="H2-text">Mороженноное</h2>
     <h3 id="H3-text">H3 text</h3>
     <h6 class="H6-text">H6 text</h6>
+    <h6 class="H6-text H2-text">H6 H2 text text</h6>
     <p>Установите последнюю версию <span style="color: green">PowerShell</span> для новых функций и улучшения!</p>
-    <a href="https://googlechromelabs.github.io/chrome-for-testing/" target="_blank">Driver</a>
+    <a href="https://googlechromelabs.github.io/chrome-for-testing/" target="_blank">Python</a>
     <p>мороженноное</p>
     <img src="https://rskrf.ru/upload/iblock/221/221d361b2cc106e9324663e05402802a.jpg" style="width: 1000px">
     <img src="https://u-stena.ru/upload/iblock/cb1/cb1c0149210e176918caef257a556254.webp" style="width: 600px">
@@ -53,6 +92,22 @@
         </tr>
     </tbody>
 </table>
+    <div class="nth">
+        <p>1</p>
+        <p>2</p>
+        <H1>3</H1>
+        <H5>4</H5>
+        <p>5</p>
+    </div>
+</div>
+<div class="JavaScript" >
+    <h2 class="H2-text">Mороженноное</h2>
+    <a href="https://googlechromelabs.github.io/chrome-for-testing/" target="_blank">JavaScript</a>
+    <ul>
+        <li>ITEM 1</li>
+        <li>ITEM 2</li>
+        <li>ITEM 3</li>
+    </ul>
 </div>
 </body>
 </html>
