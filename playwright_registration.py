@@ -1,36 +1,40 @@
-from playwright.sync_api import sync_playwright, expect
+from playwright.sync_api import sync_playwright
 
+# Открываем браузер с использованием Playwright
 with sync_playwright() as playwright:
-    # Открываем браузер Chromium (не в headless режиме, чтобы видеть действия)
+    # Запускаем Chromium браузер в обычном режиме (не headless)
     browser = playwright.chromium.launch(headless=False)
-    page = browser.new_page()
+    # Создаем новый контекст браузера (новая сессия, которая изолирована от других)
+    context = browser.new_context()
+    # Открываем новую страницу в рамках контекста
+    page = context.new_page()
 
-    # Переходим на страницу регистрации
-    page.goto('https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/registration')
+    page.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/registration")
 
-    # Находим поле "Email" и заполняем его
-    email_fild = page.get_by_test_id('registration-form-email-input').locator('input')
-    email_fild.fill("user.name@gmail.com")
+    email_input = page.get_by_test_id('registration-form-email-input').locator('input')
+    email_input.fill('user.name@gmail.com')
 
-    # Находим поле "username" и заполняем его
-    username_fild = page.get_by_test_id('registration-form-username-input').locator('input')
-    username_fild.fill("username")
+    username_input = page.get_by_test_id('registration-form-username-input').locator('input')
+    username_input.fill('username')
 
-    # Находим поле "Password" и заполняем его
-    password_fill = page.get_by_test_id('registration-form-password-input').locator('input')
-    password_fill.fill("password")
+    password_input = page.get_by_test_id('registration-form-password-input').locator('input')
+    password_input.fill('password')
 
-    # Находим кнопку "Registration" и кликаем на нее
     registration_button = page.get_by_test_id('registration-page-registration-button')
-    page.wait_for_timeout(3000)
-    registration_button.hover()
-    page.wait_for_timeout(3000)
     registration_button.click()
 
-    # После перехода ищем заголовок "Dashboard" и сравниваем текст заголовка
-    dashboard_title_name = page.get_by_test_id('dashboard-toolbar-title-text')
-    expect(dashboard_title_name).to_be_visible()
-    expect(dashboard_title_name).to_have_text('Dashboard')
+    # Сохраняем состояние браузера (куки и localStorage) в файл для дальнейшего использования
+    context.storage_state(path="browser-state.json")
 
+from playwright.sync_api import sync_playwright
 
-    page.wait_for_timeout(4000)
+# Остальной код регистрации нового пользователя без изменений
+
+with sync_playwright() as playwright:
+    browser = playwright.chromium.launch(headless=False)
+    context = browser.new_context(storage_state="browser-state.json") # Указываем файл с сохраненным состоянием
+    page = context.new_page()
+
+    page.goto("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/dashboard")
+
+    page.wait_for_timeout(5000)
