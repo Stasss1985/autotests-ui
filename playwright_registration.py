@@ -22,11 +22,15 @@ with sync_playwright() as playwright:
 
     # Находим кнопку "Registration" и кликаем на нее
     registration_button = page.get_by_test_id('registration-page-registration-button')
+    page.wait_for_timeout(3000)
+    registration_button.hover()
+    page.wait_for_timeout(3000)
     registration_button.click()
 
     # После перехода ищем заголовок "Dashboard" и сравниваем текст заголовка
     dashboard_title_name = page.get_by_test_id('dashboard-toolbar-title-text')
     expect(dashboard_title_name).to_be_visible()
     expect(dashboard_title_name).to_have_text('Dashboard')
+
 
     page.wait_for_timeout(4000)
