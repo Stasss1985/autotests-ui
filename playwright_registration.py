@@ -29,4 +29,4 @@ with sync_playwright() as playwright:
     expect(dashboard_title_name).to_be_visible()
     expect(dashboard_title_name).to_have_text('Dashboard')
 
-    page.wait_for_timeout(3000)
+    page.wait_for_timeout(4000)
