@@ -7,10 +7,9 @@ from pages.dashboard_page import DashboardPage
 @pytest.mark.regression
 def test_dashboard_displaying(dashboard_page_with_state: DashboardPage):
     dashboard_page_with_state.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/dashboard")
+    dashboard_page_with_state.sidebar.check_visible()  # это я для себя пробовал с компонента вызвать
     # Добавили проверку Navbar компонента на странице Dashboard
     dashboard_page_with_state.navbar.check_visible("username")
-    dashboard_page_with_state.sidebar.check_visible()  # это я для себя пробовал с компонента вызвать
-    dashboard_page_with_state.sidebar.click_dashboard()  # это я для себя пробовал с компонента вызвать
 
     dashboard_page_with_state.check_visible_dashboard_title()
     dashboard_page_with_state.check_visible_scores_chart()
