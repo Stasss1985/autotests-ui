@@ -20,7 +20,7 @@ with sync_playwright() as playwright:
     registration_button.click()
 
     # Сохраняем состояние браузера (куки и localStorage) в файл для дальнейшего использования
-    context.storage_state(path="browser-state-courses.json")
+    context.storage_state(path="../../browser-state-courses.json")
 
     page.wait_for_timeout(3000)
 
