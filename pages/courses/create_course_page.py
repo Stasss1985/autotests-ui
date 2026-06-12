@@ -16,5 +16,5 @@ class CreateCoursePage(BasePage):
         self.create_course_form = CreateCourseFormComponent(page)
         self.toolbar = CreateCourseToolbarViewComponent(page)
         self.exercises_toolbar = CreateCourseExercisesToolbarViewComponent(page)
-        self.exercise_form = CreateCourseExerciseFormComponent(page)   # если используется
+        self.exercise_form = CreateCourseExerciseFormComponent(page)  # если используется
         self.exercises_empty_view = EmptyViewComponent(page, 'create-course-exercises')
