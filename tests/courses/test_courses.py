@@ -52,3 +52,57 @@ class TestCourses:
             max_score="100",
             min_score="10",
         )
+
+    def test_edit_course(self, courses_list_page: CoursesListPage, create_course_page: CreateCoursePage):
+        create_course_page.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/courses/create")
+
+        create_course_page.create_course_form.check_visible(
+            title="", estimated_time="", description="", max_score="0", min_score="0"
+        )
+
+        create_course_page.image_upload_widget.upload_preview_image(
+            "C:/Users/user/1_playwright_stady/autotests-ui/testdata/files/image.png")
+        create_course_page.image_upload_widget.check_visible(is_image_uploaded=True)
+
+        create_course_page.create_course_form.fill(
+            title="Playwright",
+            estimated_time="2 weeks",
+            description="Playwright",
+            max_score="100",
+            min_score="10",
+        )
+
+        create_course_page.toolbar.check_visible()
+        create_course_page.toolbar.click_create_course_button()
+
+        courses_list_page.toolbar_view.check_visible()
+        courses_list_page.course_view.check_visible(
+            index=0,
+            title="Playwright",
+            estimated_time="2 weeks",
+            max_score="100",
+            min_score="10",
+        )
+
+        courses_list_page.course_view.menu.menu_button.click(index=0)
+        courses_list_page.course_view.menu.edit_menu_item.click()
+
+        create_course_page.create_course_form.fill(
+            title="Edited Course",
+            estimated_time="5 weeks",
+            description="Updated description",
+            max_score="90",
+            min_score="10",
+        )
+
+        # Проверка, что кнопка создания стала активной, и нажатие
+        create_course_page.toolbar.click_create_course_button()
+
+        courses_list_page.toolbar_view.check_visible()
+        courses_list_page.course_view.check_visible(
+            index=0,
+            title="Edited Course",
+            estimated_time="5 weeks",
+            max_score="90",
+            min_score="10",
+        )
