@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3eaedc32-989c-442b-91f1-9b1590852149" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/tools/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/allure/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/allure/epics.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/allure/features.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/allure/stories.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tools/allure/tags.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/browser-state.json" beforeDir="false" afterPath="$PROJECT_DIR$/browser-state.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/authentication/test_authorization.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/authentication/test_authorization.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/authentication/test_registration.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/authentication/test_registration.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/courses/test_courses.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/courses/test_courses.py" afterDir="false" />

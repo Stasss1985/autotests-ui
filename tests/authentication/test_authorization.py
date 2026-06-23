@@ -5,17 +5,20 @@ from pages.authentication.login_page import LoginPage
 from pages.authentication.registration_page import RegistrationPage
 from pages.dashboard.dashboard_page import DashboardPage
 from tools.allure.tags import AllureTag
-from tools.allure.epics import AllureEpic # Импортируем enum AllureEpic
-from tools.allure.features import AllureFeature # Импортируем enum AllureFeature
-from tools.allure.stories import AllureStory # Импортируем enum AllureStory
+from tools.allure.epics import AllureEpic  # Импортируем enum AllureEpic
+from tools.allure.features import AllureFeature  # Импортируем enum AllureFeature
+from tools.allure.stories import AllureStory  # Импортируем enum AllureStory
 from allure_commons.types import Severity
 
 
 @pytest.mark.regression
 @pytest.mark.authorization
-@allure.epic(AllureEpic.LMS) # Добавили epic
-@allure.feature(AllureFeature.AUTHENTICATION) # Добавили feature
-@allure.story(AllureStory.AUTHORIZATION) # Добавили story
+@allure.epic(AllureEpic.LMS)  # Добавили epic
+@allure.feature(AllureFeature.AUTHENTICATION)  # Добавили feature
+@allure.story(AllureStory.AUTHORIZATION)  # Добавили story
+@allure.parent_suite(AllureEpic.LMS)
+@allure.suite(AllureFeature.AUTHENTICATION)
+@allure.sub_suite(AllureStory.AUTHORIZATION)
 @allure.severity(Severity.CRITICAL)
 class TestAuthorization:
     @pytest.mark.parametrize(

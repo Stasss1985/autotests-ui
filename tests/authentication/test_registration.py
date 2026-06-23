@@ -15,6 +15,9 @@ from allure_commons.types import Severity
 @allure.epic(AllureEpic.LMS) # Добавили epic
 @allure.feature(AllureFeature.AUTHENTICATION) # Добавили feature
 @allure.story(AllureStory.REGISTRATION) # Добавили story
+@allure.parent_suite(AllureEpic.LMS)
+@allure.suite(AllureFeature.AUTHENTICATION)
+@allure.sub_suite(AllureStory.REGISTRATION)
 @allure.severity(Severity.CRITICAL)
 class TestRegistration:
     @allure.title("Успешная регистрация")

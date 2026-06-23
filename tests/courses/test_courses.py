@@ -15,6 +15,9 @@ from allure_commons.types import Severity
 @allure.epic(AllureEpic.LMS)  # Добавили epic
 @allure.feature(AllureFeature.COURSES)  # Добавили feature
 @allure.story(AllureStory.COURSES)  # Добавили story
+@allure.parent_suite(AllureEpic.LMS)
+@allure.suite(AllureFeature.COURSES)
+@allure.sub_suite(AllureStory.COURSES)
 class TestCourses:
     @allure.tag(AllureTag.COURSES, AllureTag.REGRESSION)
     @allure.title("Проверка пустого листа курса")
