@@ -9,7 +9,7 @@ class CreateCourseToolbarViewComponent(BaseComponent):
         super().__init__(page)
         self.title = Text(page,'create-course-toolbar-title-text', 'Create course toolbar title')
         self.create_course_button = Button(page,'create-course-toolbar-create-course-button', 'Create course toolbar button')
-    @allure.step('Check visible toolbar "Create course" ')
+    @allure.step('Check visible toolbar "Create course"')
     def check_visible(self):
         self.title.check_visible()
         self.title.check_have_text('Create course')
