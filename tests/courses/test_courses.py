@@ -81,8 +81,7 @@ class TestCourses:
             title="", estimated_time="", description="", max_score="0", min_score="0"
         )
 
-        create_course_page.image_upload_widget.upload_preview_image(
-            "C:/Users/user/1_playwright_stady/autotests-ui/testdata/files/image.png")
+        create_course_page.image_upload_widget.upload_preview_image("./testdata/files/image.png")
         create_course_page.image_upload_widget.check_visible(is_image_uploaded=True)
 
         create_course_page.create_course_form.fill(

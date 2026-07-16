@@ -31,14 +31,20 @@ class TestAuthorization:
     )
     @allure.title("Авторизация с не верным паспортом или паролем")
     @allure.tag(AllureTag.AUTHORIZATION, AllureTag.REGRESSION)
+    @allure.step("Авторизация с не верным паспортом или паролем")
     def test_wrong_email_or_password_authorization(self, login_page: LoginPage, email: str, password: str):
-        login_page.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/login")
-        login_page.login_form.fill(email=email, password=password)
-        login_page.click_login_button()
-        login_page.check_visible_wrong_email_or_password_alert()
+        with allure.step("Открытие страницы"):
+            login_page.visit("https://nikita-filonov.github.io/qa-automation-engineer-ui-course/#/auth/login")
+        with allure.step("Ввод емейла и паспорта"):
+            login_page.login_form.fill(email=email, password=password)
+        with allure.step("Клик по кнопки Войти"):
+            login_page.click_login_button()
+        with allure.step("Проверка предупреждения"):
+            login_page.check_visible_wrong_email_or_password_alert()
 
     @allure.title("Успешная авторизация")
     @allure.tag(AllureTag.AUTHORIZATION, AllureTag.REGRESSION)
+    @allure.step("Успешная авторизация")
     def test_successful_authorization(
             self,
             login_page: LoginPage,
