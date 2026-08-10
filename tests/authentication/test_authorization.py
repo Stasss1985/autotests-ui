@@ -35,6 +35,7 @@ class TestAuthorization:
     @allure.title("Авторизация с не верным паспортом или паролем")
     @allure.tag(AllureTag.AUTHORIZATION, AllureTag.REGRESSION)
     @allure.step("Авторизация с не верным паспортом или паролем")
+    @pytest.mark.xdist_group(name="authorization-group")  # Добавили xdist группу
     def test_wrong_email_or_password_authorization(self, login_page: LoginPage, email: str, password: str):
         #with allure.step("Открытие страницы"):
             login_page.visit(AppRoute.LOGIN)

@@ -25,6 +25,7 @@ from tools.routes import AppRoute
 class TestRegistration:
     @allure.title("Успешная регистрация")
     @allure.tag(AllureTag.REGISTRATION, AllureTag.REGRESSION)
+    @pytest.mark.xdist_group(name="authorization-group")  # Добавили xdist группу
     def test_successful_registration(self, dashboard_page: DashboardPage, registration_page: RegistrationPage):
         registration_page.visit(AppRoute.REGISTRATION)
         registration_page.registration_form.fill(
