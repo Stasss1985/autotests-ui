@@ -2,7 +2,8 @@ from playwright.sync_api import Locator, expect
 import allure
 
 from elements.base_element import BaseElement
-
+from tools.logger import get_logger
+logger = get_logger("INPUT")
 
 class Input(BaseElement):
     @property
@@ -15,12 +16,16 @@ class Input(BaseElement):
 
     def fill(self, value: str, nth: int = 0, **kwargs):
         # Добавили аргумент nth и передаем его в get_locator
-        with allure.step(f'Fill {self.type_of} "{self.name}" to value "{value}"'):  # Добавили шаг
+        step = f'Fill {self.type_of} "{self.name}" to value "{value}"'
+        with allure.step(step):  # Добавили шаг
             locator = self.get_locator(nth, **kwargs)
+            logger.info(step)
             locator.fill(value)
 
     def check_have_value(self, value: str, nth: int = 0, **kwargs):
         # Добавили аргумент nth и передаем его в get_locator
-        with allure.step(f'Checking that {self.type_of} "{self.name}" has a value "{value}"'):  # Добавили шаг
+        step = f'Checking that {self.type_of} "{self.name}" has a value "{value}"'
+        with allure.step(step):  # Добавили шаг
             locator = self.get_locator(nth, **kwargs)
+            logger.info(step)
             expect(locator).to_have_value(value)
