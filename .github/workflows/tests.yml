@@ -146,45 +146,162 @@
 
 
 
+#name: UI tests
+#
+#on:
+#  push:
+#    branches: [ main ]
+#  pull_request:
+#    branches: [ main ]
+#
+## Запрет параллельных запусков — защита от гонки за gh-pages
+#concurrency:
+#  group: allure-report
+#  cancel-in-progress: false
+#
+#permissions:
+#  contents: write  # нужно для пуша в gh-pages
+#
+#jobs:
+#  run-tests:
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Check out repository
+#        uses: actions/checkout@v4
+#
+#      - name: Set up Python
+#        uses: actions/setup-python@v4
+#        with:
+#          python-version: '3.11'
+#
+#      - name: Install dependencies
+#        run: |
+#          python -m pip install --upgrade pip
+#          pip install -r requirements.txt
+#          playwright install --with-deps chromium
+#
+#      - name: Run Playwright tests
+#        run: pytest -m regression --alluredir=allure-results --numprocesses 2
+#
+#      - name: Install Allure CLI
+#        if: always()
+#        run: |
+#          sudo apt-get update
+#          sudo apt-get install -y openjdk-17-jre-headless wget
+#          wget -q https://github.com/allure-framework/allure2/releases/download/2.29.0/allure-2.29.0.tgz
+#          tar -xzf allure-2.29.0.tgz
+#          sudo mv allure-2.29.0 /opt/allure
+#          sudo ln -sf /opt/allure/bin/allure /usr/local/bin/allure
+#          allure --version
+#
+#      - name: Restore Allure history from gh-pages
+#        if: always()
+#        run: |
+#          git clone --depth=1 --branch=gh-pages \
+#            https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git gh-pages \
+#            || echo "No gh-pages branch yet"
+#          rm -rf allure-results/history
+#          if [ -d "gh-pages/last-history" ]; then
+#            cp -r gh-pages/last-history allure-results/history
+#            echo "History restored"
+#          else
+#            echo "No history found, starting fresh"
+#          fi
+#
+#      - name: Generate Allure Report
+#        if: always()
+#        run: allure generate allure-results -o allure-report --clean
+#
+#      - name: Save history for next run
+#        if: always()
+#        run: |
+#          mkdir -p allure-history
+#          cp -r allure-report/* allure-history/
+#          rm -rf allure-history/last-history
+#          cp -r allure-report/history allure-history/last-history
+#
+#  publish-report:
+#    needs: run-tests
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Deploy report to GitHub Pages
+#        uses: peaceiris/actions-gh-pages@v4
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          publish_branch: gh-pages
+#          publish_dir: allure-history
+#          keep_files: false
+
+
+## Имя workflow, которое будет отображаться в интерфейсе GitHub Actions
 name: UI tests
 
+## Указываем, когда будет запускаться данный workflow
 on:
   push:
-    branches: [ main ]
+    branches: [ main ]  # Запускать workflow при коммите в ветку main
   pull_request:
-    branches: [ main ]
+    branches: [ main ]  # Запускать workflow при pull request в ветку main
 
-# Запрет параллельных запусков — защита от гонки за gh-pages
+## Запрет параллельных запусков — защита от гонки за ветку gh-pages
 concurrency:
   group: allure-report
   cancel-in-progress: false
 
+## Права на запись в репозиторий — нужны для пуша отчёта в ветку gh-pages
 permissions:
-  contents: write  # нужно для пуша в gh-pages
+  contents: write
 
 jobs:
+  # ========== ДЖОБА 1: запуск автотестов ==========
   run-tests:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Тесты запускаются на последней версии Ubuntu
     steps:
+      # 1. Клонируем репозиторий на виртуальную машину
       - name: Check out repository
         uses: actions/checkout@v4
 
+      # 2. Устанавливаем Python 3.11
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
           python-version: '3.11'
 
+      # 3. Устанавливаем зависимости проекта и браузер Chromium для Playwright
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           playwright install --with-deps chromium
 
+      # 4. Запускаем тесты с маркером regression, результаты складываем в allure-results
       - name: Run Playwright tests
         run: pytest -m regression --alluredir=allure-results --numprocesses 2
 
+      # 5. Сохраняем папку allure-results как артефакт,
+      #    чтобы передать её во вторую джобу (джобы работают на разных машинах,
+      #    файлы между ними напрямую не передаются)
+      - name: Upload allure-results artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: allure-results   # Имя артефакта — по нему скачаем во второй джобе
+          path: allure-results   # Папка, которую сохраняем
+
+  # ========== ДЖОБА 2: генерация и публикация отчёта ==========
+  publish-report:
+    needs: run-tests  # Запускается только после УСПЕШНОГО завершения run-tests
+    runs-on: ubuntu-latest
+    steps:
+      # 1. Скачиваем артефакт с результатами тестов из первой джобы
+      - name: Download allure-results artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: allure-results   # Имя артефакта из джобы run-tests
+          path: allure-results   # Куда распаковать на этой машине
+
+      # 2. Устанавливаем Allure CLI (окружение первой джобы недоступно,
+      #    поэтому Java и Allure ставим заново на этой машине)
       - name: Install Allure CLI
-        if: always()
         run: |
           sudo apt-get update
           sudo apt-get install -y openjdk-17-jre-headless wget
@@ -194,8 +311,10 @@ jobs:
           sudo ln -sf /opt/allure/bin/allure /usr/local/bin/allure
           allure --version
 
+      # 3. Забираем историю прошлых прогонов из ветки gh-pages
+      #    и кладём её в allure-results/history — тогда новый отчёт
+      #    включит историю предыдущих запусков
       - name: Restore Allure history from gh-pages
-        if: always()
         run: |
           git clone --depth=1 --branch=gh-pages \
             https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git gh-pages \
@@ -208,23 +327,24 @@ jobs:
             echo "No history found, starting fresh"
           fi
 
+      # 4. Генерируем HTML-отчёт Allure из результатов тестов
       - name: Generate Allure Report
-        if: always()
         run: allure generate allure-results -o allure-report --clean
 
+      # 5. Собираем папку allure-history для публикации:
+      #    весь отчёт + копия папки history для следующего прогона
       - name: Save history for next run
-        if: always()
         run: |
           mkdir -p allure-history
           cp -r allure-report/* allure-history/
           rm -rf allure-history/last-history
           cp -r allure-report/history allure-history/last-history
 
+      # 6. Публикуем отчёт на GitHub Pages (ветка gh-pages)
       - name: Deploy report to GitHub Pages
-        if: always()
         uses: peaceiris/actions-gh-pages@v4
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_branch: gh-pages
-          publish_dir: allure-history
-          keep_files: false
+          github_token: ${{ secrets.GITHUB_TOKEN }}  # Токен для аутентификации
+          publish_branch: gh-pages                   # Ветка для публикации
+          publish_dir: allure-history                # Папка, которую публикуем
+          keep_files: false                          # Полностью заменяем содержимое ветки
