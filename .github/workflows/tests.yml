@@ -29,29 +29,44 @@ jobs:
         run: |
           pytest -m regression --alluredir=allure-results --numprocesses 2
 
-      # ---- НОВЫЕ ШАГИ ДЛЯ ALLURE ----
+      # ---- ВСТАВЛЯЕМ РУЧНУЮ ГЕНЕРАЦИЮ ALLURE ----
 
-      - name: Get Allure history from gh-pages
+      - name: Install Allure command line
         run: |
-          git clone --depth=1 --branch=gh-pages https://github.com/${{ github.repository }}.git gh-pages || echo "No gh-pages branch yet"
-          # Если ветка gh-pages существует, но папки last-history нет – создаём пустую
-          if [ -d "gh-pages" ]; then
-            mkdir -p gh-pages/last-history
+          sudo apt update
+          sudo apt install -y openjdk-17-jre-headless wget
+          wget https://github.com/allure-framework/allure2/releases/download/2.29.0/allure_2.29.0-1_all.deb
+          sudo dpkg -i allure_2.29.0-1_all.deb
+          allure --version
+
+      - name: Get previous Allure history (if exists)
+        run: |
+          git clone --depth=1 --branch=gh-pages https://github.com/${{ github.repository }}.git gh-pages || echo "No gh-pages yet"
+          mkdir -p allure-history  # создаём папку для будущего отчёта
+          # если есть папка с историей – копируем её в allure-results для формирования истории
+          if [ -d "gh-pages/last-history" ]; then
+            cp -r gh-pages/last-history allure-results/history || true
           else
-            mkdir -p gh-pages/last-history
+            echo "No history found, starting fresh"
           fi
 
-      - name: Generate Allure Report with history
-        uses: allure-framework/allure-github-actions@v2
-        with:
-          results_dir: allure-results
-          history_dir: gh-pages/last-history
+      - name: Generate Allure Report
+        run: |
+          allure generate allure-results -o allure-report --clean
+
+      - name: Save report with history for next run
+        run: |
+          # Копируем историю из сгенерированного отчёта в отдельную папку для деплоя
+          mkdir -p allure-history
+          cp -r allure-report/history allure-history/last-history
+          # Также копируем весь отчёт в allure-history (для публикации)
+          cp -r allure-report/* allure-history/
 
       - name: Deploy report to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
         if: always()
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
-          keep_files: true   # чтобы не затирать старые отчёты
+          keep_files: true
