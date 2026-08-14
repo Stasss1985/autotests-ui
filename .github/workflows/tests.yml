@@ -29,21 +29,22 @@ jobs:
         run: |
           pytest -m regression --alluredir=allure-results --numprocesses 2
 
-      # ---- ВСТАВЛЯЕМ РУЧНУЮ ГЕНЕРАЦИЮ ALLURE ----
-
+      # ---- Установка Allure (исправлено) ----
       - name: Install Allure command line
         run: |
           sudo apt update
           sudo apt install -y openjdk-17-jre-headless wget
-          wget https://github.com/allure-framework/allure2/releases/download/2.29.0/allure_2.29.0-1_all.deb
-          sudo dpkg -i allure_2.29.0-1_all.deb
+          wget https://github.com/allure-framework/allure2/releases/download/2.29.0/allure-2.29.0.tgz
+          tar -xzf allure-2.29.0.tgz
+          sudo mv allure-2.29.0 /opt/allure
+          sudo ln -s /opt/allure/bin/allure /usr/local/bin/allure
           allure --version
 
+      # ---- Работа с историей и генерация отчёта ----
       - name: Get previous Allure history (if exists)
         run: |
           git clone --depth=1 --branch=gh-pages https://github.com/${{ github.repository }}.git gh-pages || echo "No gh-pages yet"
-          mkdir -p allure-history  # создаём папку для будущего отчёта
-          # если есть папка с историей – копируем её в allure-results для формирования истории
+          mkdir -p allure-history  # папка для будущего отчёта
           if [ -d "gh-pages/last-history" ]; then
             cp -r gh-pages/last-history allure-results/history || true
           else
@@ -56,12 +57,11 @@ jobs:
 
       - name: Save report with history for next run
         run: |
-          # Копируем историю из сгенерированного отчёта в отдельную папку для деплоя
           mkdir -p allure-history
           cp -r allure-report/history allure-history/last-history
-          # Также копируем весь отчёт в allure-history (для публикации)
           cp -r allure-report/* allure-history/
 
+      # ---- Деплой ----
       - name: Deploy report to GitHub Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v4
