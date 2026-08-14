@@ -1,0 +1,58 @@
+INFO     BASE_PAGE:base_page.py:16 Opening the url "AppRoute.REGISTRATION"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=registration-form-email-input" at index "0"
+INFO     INPUT:input.py:22 Fill input "email_registration_input" to value "user.name@gmail.com"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=registration-form-username-input" at index "0"
+INFO     INPUT:input.py:22 Fill input "username_registration_input" to value "username"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=registration-form-password-input" at index "0"
+INFO     INPUT:input.py:22 Fill input "password_registration_input" to value "password"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=registration-page-registration-button" at index "0"
+INFO     BASE_ELEMENT:base_element.py:32 Clicking button "Registration_button"
+INFO     BASE_PAGE:base_page.py:16 Opening the url "AppRoute.COURSES"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=navigation-navbar-app-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:40 Checking that text "app_title" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=navigation-navbar-app-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:48 Checking that text "app_title" has text "UI Course"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=navigation-navbar-welcome-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:40 Checking that text "welcome_title" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=navigation-navbar-welcome-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:48 Checking that text "welcome_title" has text "Welcome, username!"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=logout-drawer-list-item-icon" at index "0"
+INFO     BASE_ELEMENT:base_element.py:40 Checking that icon "icon_sidebar" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=logout-drawer-list-item-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:40 Checking that text "title_sidebar" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=logout-drawer-list-item-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:48 Checking that text "title_sidebar" has text "Logout"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=logout-drawer-list-item-button" at index "0"
+INFO     BASE_ELEMENT:base_element.py:40 Checking that button "button_sidebar" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=courses-drawer-list-item-icon" at index "0"
+INFO     BASE_ELEMENT:base_element.py:40 Checking that icon "icon_sidebar" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=courses-drawer-list-item-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:40 Checking that text "title_sidebar" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=courses-drawer-list-item-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:48 Checking that text "title_sidebar" has text "Courses"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=courses-drawer-list-item-button" at index "0"
+INFO     BASE_ELEMENT:base_element.py:40 Checking that button "button_sidebar" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=dashboard-drawer-list-item-icon" at index "0"
+INFO     BASE_ELEMENT:base_element.py:40 Checking that icon "icon_sidebar" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=dashboard-drawer-list-item-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:40 Checking that text "title_sidebar" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=dashboard-drawer-list-item-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:48 Checking that text "title_sidebar" has text "Dashboard"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=dashboard-drawer-list-item-button" at index "0"
+INFO     BASE_ELEMENT:base_element.py:40 Checking that button "button_sidebar" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=courses-list-toolbar-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:40 Checking that text "Title" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=courses-list-toolbar-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:48 Checking that text "Title" has text "Courses"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=courses-list-toolbar-create-course-button" at index "0"
+INFO     BASE_ELEMENT:base_element.py:40 Checking that button "Create course button" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=courses-list-empty-view-icon" at index "0"
+INFO     BASE_ELEMENT:base_element.py:40 Checking that icon "Icon" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=courses-list-empty-view-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:40 Checking that text "Title" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=courses-list-empty-view-title-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:48 Checking that text "Title" has text "There is no results"
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=courses-list-empty-view-description-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:40 Checking that text "Description" is visible
+INFO     BASE_ELEMENT:base_element.py:24 Getting locator with "data-testid=courses-list-empty-view-description-text" at index "0"
+INFO     BASE_ELEMENT:base_element.py:48 Checking that text "Description" has text "Results from the load test pipeline will be displayed here"
