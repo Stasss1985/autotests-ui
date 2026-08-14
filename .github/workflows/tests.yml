@@ -134,7 +134,7 @@ jobs:
           cp -r allure-report/history allure-history/last-history
           cp -r allure-report/* allure-history/
 
-      # ---- Деплой to GitHub Pages из allure-history----
+      # ---- Деплой to GitHub Pages----
       - name: Deploy report to GitHub Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v4
