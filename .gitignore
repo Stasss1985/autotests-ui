@@ -7,8 +7,8 @@
 __pycache__
 
 # allure
-allure-results/
-allure-report/
+#allure-results/
+#allure-report/
 
 # testing artifacts
 *.html
