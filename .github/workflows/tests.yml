@@ -71,6 +71,81 @@
 
 
 
+#name: UI tests
+#
+#on:
+#  push:
+#    branches: [ main ]
+#  pull_request:
+#    branches: [ main ]
+#
+#jobs:
+#  run-tests:
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#      - name: Check out repository
+#        uses: actions/checkout@v4
+#
+#      - name: Set up Python
+#        uses: actions/setup-python@v4
+#        with:
+#          python-version: '3.11'
+#
+#      - name: Install dependencies
+#        run: |
+#          python -m pip install --upgrade pip
+#          pip install -r requirements.txt
+#          playwright install --with-deps
+#
+#      - name: Run Playwright tests with pytest and generate Allure results
+#        run: |
+#          pytest -m regression --alluredir=allure-results --numprocesses 2
+#
+#      # ---- Установка Allure (исправлено) ----
+#      - name: Install Allure command line
+#        run: |
+#          sudo apt update
+#          sudo apt install -y openjdk-17-jre-headless wget
+#          wget https://github.com/allure-framework/allure2/releases/download/2.29.0/allure-2.29.0.tgz
+#          tar -xzf allure-2.29.0.tgz
+#          sudo mv allure-2.29.0 /opt/allure
+#          sudo ln -s /opt/allure/bin/allure /usr/local/bin/allure
+#          allure --version
+#
+#      # ---- Работа с историей и генерация отчёта ----
+#      - name: Get previous Allure history (if exists)
+#        run: |
+#          git clone --depth=1 --branch=gh-pages https://github.com/${{ github.repository }}.git gh-pages || echo "No gh-pages yet"
+#          mkdir -p allure-history  # папка для будущего отчёта
+#          if [ -d "gh-pages/last-history" ]; then
+#            cp -r gh-pages/last-history allure-results/history || true
+#          else
+#            echo "No history found, starting fresh"
+#          fi
+#
+#      - name: Generate Allure Report
+#        run: |
+#          allure generate allure-results -o allure-report --clean
+#
+#      - name: Save report with history for next run
+#        run: |
+#          mkdir -p allure-history
+#          cp -r allure-report/history allure-history/last-history
+#          cp -r allure-report/* allure-history/
+#
+#      # ---- Деплой to GitHub Pages----
+#      - name: Deploy report to GitHub Pages
+#        if: always()
+#        uses: peaceiris/actions-gh-pages@v4
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          publish_branch: gh-pages
+#          publish_dir: allure-history
+#          keep_files: true
+
+
+
 name: UI tests
 
 on:
@@ -79,10 +154,17 @@ on:
   pull_request:
     branches: [ main ]
 
+# Запрет параллельных запусков — защита от гонки за gh-pages
+concurrency:
+  group: allure-report
+  cancel-in-progress: false
+
+permissions:
+  contents: write  # нужно для пуша в gh-pages
+
 jobs:
   run-tests:
     runs-on: ubuntu-latest
-
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -96,45 +178,48 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-          playwright install --with-deps
+          playwright install --with-deps chromium
 
-      - name: Run Playwright tests with pytest and generate Allure results
-        run: |
-          pytest -m regression --alluredir=allure-results --numprocesses 2
+      - name: Run Playwright tests
+        run: pytest -m regression --alluredir=allure-results --numprocesses 2
 
-      # ---- Установка Allure (исправлено) ----
-      - name: Install Allure command line
+      - name: Install Allure CLI
+        if: always()
         run: |
-          sudo apt update
-          sudo apt install -y openjdk-17-jre-headless wget
-          wget https://github.com/allure-framework/allure2/releases/download/2.29.0/allure-2.29.0.tgz
+          sudo apt-get update
+          sudo apt-get install -y openjdk-17-jre-headless wget
+          wget -q https://github.com/allure-framework/allure2/releases/download/2.29.0/allure-2.29.0.tgz
           tar -xzf allure-2.29.0.tgz
           sudo mv allure-2.29.0 /opt/allure
-          sudo ln -s /opt/allure/bin/allure /usr/local/bin/allure
+          sudo ln -sf /opt/allure/bin/allure /usr/local/bin/allure
           allure --version
 
-      # ---- Работа с историей и генерация отчёта ----
-      - name: Get previous Allure history (if exists)
+      - name: Restore Allure history from gh-pages
+        if: always()
         run: |
-          git clone --depth=1 --branch=gh-pages https://github.com/${{ github.repository }}.git gh-pages || echo "No gh-pages yet"
-          mkdir -p allure-history  # папка для будущего отчёта
+          git clone --depth=1 --branch=gh-pages \
+            https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git gh-pages \
+            || echo "No gh-pages branch yet"
+          rm -rf allure-results/history
           if [ -d "gh-pages/last-history" ]; then
-            cp -r gh-pages/last-history allure-results/history || true
+            cp -r gh-pages/last-history allure-results/history
+            echo "History restored"
           else
             echo "No history found, starting fresh"
           fi
 
       - name: Generate Allure Report
-        run: |
-          allure generate allure-results -o allure-report --clean
+        if: always()
+        run: allure generate allure-results -o allure-report --clean
 
-      - name: Save report with history for next run
+      - name: Save history for next run
+        if: always()
         run: |
           mkdir -p allure-history
-          cp -r allure-report/history allure-history/last-history
           cp -r allure-report/* allure-history/
+          rm -rf allure-history/last-history
+          cp -r allure-report/history allure-history/last-history
 
-      # ---- Деплой to GitHub Pages----
       - name: Deploy report to GitHub Pages
         if: always()
         uses: peaceiris/actions-gh-pages@v4
@@ -142,5 +227,4 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
-          keep_files: true
-
+          keep_files: false
